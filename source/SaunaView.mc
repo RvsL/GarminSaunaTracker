@@ -125,30 +125,68 @@ class SaunaView extends WatchUi.View {
         dc.drawText(minX, timeY, timeFont, minStr, Graphics.TEXT_JUSTIFY_LEFT);
 
         
-        // --- 5.5. ПАР/ДЫМ (Слева, декоративный эффект) ---
-        // Рисуем пар только во время сауны
+        // --- 5.5. ПАР/ДЫМ (Декоративный эффект) ---
+        // Волнистые линии пара + точки для градиента
         if (mDataParams.isSessionActive && mDataParams.isSaunaMode) {
             dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
             dc.setPenWidth(1);
             
-            // Создаем волнистые облачка пара, поднимающиеся снизу вверх
-            // Используем totalDuration для анимации (медленное движение)
-            var steamOffset = (mDataParams.totalDuration % 6) * 2;
+            // Волнистые линии пара, распределенные по всей левой стороне (высота)
+            // Линия 1 (верхняя часть)
+            dc.drawLine(8, 20, 10, 15);
+            dc.drawLine(10, 15, 8, 10);
+            dc.drawLine(8, 10, 9, 5);
             
-            // Нижнее облачко пара (самое плотное)
-            dc.fillCircle(8, 95 - steamOffset, 4);
-            dc.fillCircle(12, 93 - steamOffset, 3);
-            dc.fillCircle(6, 90 - steamOffset, 3);
+            // Линия 2
+            dc.drawLine(12, 40, 14, 33);
+            dc.drawLine(14, 33, 12, 27);
+            dc.drawLine(12, 27, 13, 21);
             
-            // Среднее облачко (немного выше и прозрачнее)
-            dc.drawCircle(10, 78 - steamOffset, 5);
-            dc.drawCircle(14, 75 - steamOffset, 4);
-            dc.drawCircle(7, 74 - steamOffset, 3);
+            // Линия 3
+            dc.drawLine(8, 60, 10, 52);
+            dc.drawLine(10, 52, 8, 46);
+            dc.drawLine(8, 46, 9, 40);
             
-            // Верхнее облачко (самое рассеянное)
-            dc.drawCircle(9, 62 - steamOffset, 3);
-            dc.drawCircle(12, 60 - steamOffset, 2);
-            dc.drawCircle(6, 59 - steamOffset, 2);
+            // Линия 4 (средняя часть)
+            dc.drawLine(14, 78, 16, 70);
+            dc.drawLine(16, 70, 14, 64);
+            dc.drawLine(14, 64, 15, 58);
+            
+            // Линия 5
+            dc.drawLine(10, 95, 12, 87);
+            dc.drawLine(12, 87, 10, 81);
+            dc.drawLine(10, 81, 11, 75);
+            
+            // Линия 6 (нижняя часть)
+            dc.drawLine(13, 112, 15, 103);
+            dc.drawLine(15, 103, 13, 96);
+            dc.drawLine(13, 96, 14, 90);
+            
+            // Линия 7
+            dc.drawLine(9, 130, 11, 121);
+            dc.drawLine(11, 121, 9, 114);
+            dc.drawLine(9, 114, 10, 108);
+            
+            // Градиент из точек слева от кривых
+            // Верхние точки
+            dc.drawPoint(3, 12);
+            dc.drawPoint(5, 18);
+            dc.drawPoint(4, 25);
+            dc.drawPoint(6, 32);
+            dc.drawPoint(3, 38);
+            dc.drawPoint(5, 45);
+            dc.drawPoint(4, 52);
+            dc.drawPoint(6, 59);
+            dc.drawPoint(3, 66);
+            dc.drawPoint(5, 73);
+            dc.drawPoint(4, 80);
+            dc.drawPoint(6, 87);
+            dc.drawPoint(3, 94);
+            dc.drawPoint(5, 101);
+            dc.drawPoint(4, 108);
+            dc.drawPoint(6, 115);
+            dc.drawPoint(3, 122);
+            dc.drawPoint(5, 129);
         }
 
 

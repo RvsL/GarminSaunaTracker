@@ -8,419 +8,845 @@ import Toybox.Attention;
 import Toybox.ActivityRecording;
 [ @file = "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc"; @line = 5; @symbol_importdef<0> = [Toybox,5,7,13]; @symbol_importdef<1> = [Timer,5,14,19]; ]
 import Toybox.Timer;
-[ @file = "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc"; @line = 7; @symbol_classdef = [SaunaDelegate,7,6,19]; @symbol_extends<0> = [WatchUi,7,28,35]; @symbol_extends<1> = [BehaviorDelegate,7,36,52]; ]
+[ @file = "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc"; @line = 6; @symbol_importdef<0> = [Toybox,6,7,13]; @symbol_importdef<1> = [Lang,6,14,18]; ]
+import Toybox.Lang;
+[ @file = "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc"; @line = 8; @symbol_classdef = [SaunaDelegate,8,6,19]; @symbol_extends<0> = [WatchUi,8,28,35]; @symbol_extends<1> = [BehaviorDelegate,8,36,52]; ]
 class SaunaDelegate extends WatchUi.BehaviorDelegate {
-    [ @file = "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc"; @line = 7; ]
+    [ @file = "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc"; @line = 8; ]
     <init> {
     }
-    [ @file = "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc"; @line = 7; ]
+    [ @file = "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc"; @line = 8; ]
     static
     <init> {
     }
-    [ @file = "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc"; @line = 9; @position = 8; @symbol_vardef = [mData,9,8,13]; ]
+    [ @file = "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc"; @line = 10; @position = 8; @symbol_vardef = [mData,10,8,13]; ]
     var mData;
-    [ @file = "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc"; @line = 10; @position = 8; @symbol_vardef = [session,10,8,15]; ]
+    [ @file = "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc"; @line = 11; @position = 8; @symbol_vardef = [session,11,8,15]; ]
     var session = null;
-    [ @file = "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc"; @line = 11; @position = 8; @symbol_vardef = [timer,11,8,13]; ]
+    [ @file = "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc"; @line = 12; @position = 8; @symbol_vardef = [timer,12,8,13]; ]
     var timer;
-    [ @file = "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc"; @line = 14; @position = 10; @symbol_constdef = [SAUNA_DURATION,14,10,24]; ]
-    const SAUNA_DURATION = 900;
-    [ @file = "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc"; @line = 16; @symbol_functiondef = [initialize,16,13,23]; @symbol_param<0> = [data,16,24,28]; ]
+    [ @file = "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc"; @line = 14; @symbol_functiondef = [initialize,14,13,23]; @symbol_param<0> = [data,14,24,28]; ]
     function initialize(data) as Void {
-_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_16_30_23_4_start:
-[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 17 8 ]
-        symbol [ BehaviorDelegate %tmp.2 17 8 24 ];
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_14_30_20_4_start:
+[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 15 8 ]
+        symbol [ BehaviorDelegate %tmp.2 15 8 24 ];
         %tmp.2 = getv ? :BehaviorDelegate;
-        symbol [ initialize %tmp.3 17 25 35 ];
+        symbol [ initialize %tmp.3 15 25 35 ];
         %tmp.3 = getv function %tmp.2 :initialize;
         invoke %tmp.2 %tmp.3();
-[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 18 8 ]
+[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 16 8 ]
         %tmp.4 = lgetv %data;
-        symbol [ data %tmp.4 18 16 20 ];
-        symbol [ mData ? 18 8 13 ];
+        symbol [ data %tmp.4 16 16 20 ];
+        symbol [ mData ? 16 8 13 ];
         putv self :mData %tmp.4;
-[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 21 8 ]
-        symbol [ Timer %tmp.7 21 20 25 ];
+[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 18 8 ]
+        symbol [ Timer %tmp.7 18 20 25 ];
         %tmp.7 = getm $.Toybox.Timer;
-        symbol [ Timer %tmp.8 21 26 31 ];
+        symbol [ Timer %tmp.8 18 26 31 ];
         %tmp.8 = getv function ? %tmp.7 :Timer;
         %tmp.5 = newc %tmp.8 ();
-        symbol [ timer ? 21 8 13 ];
+        symbol [ timer ? 18 8 13 ];
         putv self :timer %tmp.5;
-[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 22 8 ]
-        symbol [ timer %tmp.10 22 8 13 ];
+[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 19 8 ]
+        symbol [ timer %tmp.10 19 8 13 ];
         %tmp.10 = getv ? :timer;
-        symbol [ start %tmp.11 22 14 19 ];
+        symbol [ start %tmp.11 19 14 19 ];
         %tmp.11 = getv function %tmp.10 :start;
         %tmp.12 = self;
-        symbol [ method %tmp.13 22 20 26 ];
+        symbol [ method %tmp.13 19 20 26 ];
         %tmp.13 = getv function %tmp.12 :method;
         %tmp.15 = const :onTimerTick;
-        symbol [ onTimerTick %tmp.15 22 28 39 const ];
+        symbol [ onTimerTick %tmp.15 19 28 39 const ];
         %tmp.16 = invoke %tmp.12 %tmp.13(%tmp.15);
         %tmp.17 = 1000;
         %tmp.18 = true;
         invoke %tmp.10 %tmp.11(%tmp.16, %tmp.17, %tmp.18);
-_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_16_30_23_4_stop:
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_14_30_20_4_stop:
     }
-    [ @file = "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc"; @line = 25; @symbol_functiondef = [onTimerTick,25,13,24]; ]
+    [ @file = "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc"; @line = 22; @symbol_functiondef = [onTimerTick,22,13,24]; ]
     function onTimerTick() as Void {
-_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_25_35_41_4_start:
-[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 27 8 ]
-_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_27_8_38_8_if_stmt:
-_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_27_12_27_51_begin:
-        symbol [ session %tmp.2 27 12 19 ];
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_22_35_48_4_start:
+[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 23 8 ]
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_23_8_46_8_if_stmt:
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_23_12_23_51_begin:
+        symbol [ session %tmp.2 23 12 19 ];
         %tmp.2 = getv ? :session;
         %tmp.3 = null;
         %tmp.4 = ne %tmp.2 %tmp.3;
-        bf %tmp.4 @_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_27_8_38_8_if_end;
-_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_27_31_27_51_true:
-        symbol [ session %tmp.6 27 31 38 ];
+        bf %tmp.4 @_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_23_8_46_8_if_end;
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_23_31_23_51_true:
+        symbol [ session %tmp.6 23 31 38 ];
         %tmp.6 = getv ? :session;
         %tmp.7 = as %tmp.6 { (!Null) };
-        symbol [ isRecording %tmp.8 27 39 50 ];
+        symbol [ isRecording %tmp.8 23 39 50 ];
         %tmp.8 = getv function %tmp.7 :isRecording;
         %tmp.9 = invoke %tmp.7 %tmp.8();
         push %tmp.9;
-_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_27_31_27_51_end:
-        %tmp.10 = phi [%tmp.4 @_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_27_12_27_51_begin] [%tmp.9 @_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_27_31_27_51_true] [%tmp.10 @_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_27_31_27_51_end];
-        bf %tmp.10 @_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_27_8_38_8_if_end;
-_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_27_8_38_8_if_true:
-_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_27_54_38_8_start:
-[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 28 12 ]
-        symbol [ mData %tmp.11 28 12 17 ];
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_23_31_23_51_end:
+        %tmp.10 = phi [%tmp.4 @_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_23_12_23_51_begin] [%tmp.9 @_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_23_31_23_51_true] [%tmp.10 @_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_23_31_23_51_end];
+        bf %tmp.10 @_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_23_8_46_8_if_end;
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_23_8_46_8_if_true:
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_23_54_46_8_start:
+[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 24 12 ]
+        symbol [ mData %tmp.11 24 12 17 ];
         %tmp.11 = getv self :mData;
-        symbol [ mData %tmp.14 28 12 17 ];
+        symbol [ mData %tmp.14 24 12 17 ];
         %tmp.14 = getv ? :mData;
-        symbol [ totalDuration %tmp.15 28 18 31 ];
+        symbol [ totalDuration %tmp.15 24 18 31 ];
         %tmp.15 = getv %tmp.14 :totalDuration;
         %tmp.16 = add %tmp.15 1;
-        symbol [ totalDuration ? 28 18 31 ];
+        symbol [ totalDuration ? 24 18 31 ];
         putv %tmp.11 :totalDuration dup %tmp.16;
-[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 31 12 ]
-_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_31_12_37_12_if_stmt:
-        symbol [ mData %tmp.18 31 16 21 ];
+[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 26 12 ]
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_26_12_45_12_if_stmt:
+        symbol [ mData %tmp.18 26 16 21 ];
         %tmp.18 = getv ? :mData;
-        symbol [ timeLeft %tmp.19 31 22 30 ];
-        %tmp.19 = getv %tmp.18 :timeLeft;
-        %tmp.20 = 0;
-        %tmp.21 = gt %tmp.19 %tmp.20;
-        bf %tmp.21 @_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_31_12_37_12_if_false;
-_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_31_12_37_12_if_true:
-_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_31_36_33_12_start:
-[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 32 16 ]
-        symbol [ mData %tmp.22 32 16 21 ];
-        %tmp.22 = getv self :mData;
-        symbol [ mData %tmp.25 32 16 21 ];
-        %tmp.25 = getv ? :mData;
-        symbol [ timeLeft %tmp.26 32 22 30 ];
-        %tmp.26 = getv %tmp.25 :timeLeft;
-        %tmp.27 = sub %tmp.26 1;
-        symbol [ timeLeft ? 32 22 30 ];
-        putv %tmp.22 :timeLeft dup %tmp.27;
-_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_31_36_33_12_stop:
-        goto @_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_31_12_37_12_if_end;
-_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_31_12_37_12_if_false:
-[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 33 19 ]
-_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_33_19_37_12_if_stmt:
-        symbol [ mData %tmp.29 33 23 28 ];
-        %tmp.29 = getv ? :mData;
-        symbol [ timeLeft %tmp.30 33 29 37 ];
-        %tmp.30 = getv %tmp.29 :timeLeft;
-        %tmp.31 = 0;
-        %tmp.32 = eq %tmp.30 %tmp.31;
-        bf %tmp.32 @_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_33_19_37_12_if_end;
-_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_33_19_37_12_if_true:
-_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_33_44_37_12_start:
-[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 35 16 ]
-        %tmp.33 = self;
-        symbol [ vibrate %tmp.34 35 16 23 ];
-        %tmp.34 = getv function %tmp.33 :vibrate;
-        invoke %tmp.33 %tmp.34();
-[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 36 16 ]
-        symbol [ mData %tmp.35 36 16 21 ];
-        %tmp.35 = getv self :mData;
-        %tmp.36 = -1;
-        symbol [ timeLeft ? 36 22 30 ];
-        putv %tmp.35 :timeLeft %tmp.36;
-_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_33_44_37_12_stop:
-        goto @_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_33_19_37_12_if_end;
-_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_33_19_37_12_if_end:
-_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_31_12_37_12_if_end:
-_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_27_54_38_8_stop:
-        goto @_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_27_8_38_8_if_end;
-_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_27_8_38_8_if_end:
-[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 40 8 ]
-        symbol [ WatchUi %tmp.37 40 8 15 ];
-        %tmp.37 = getm $.Toybox.WatchUi;
-        symbol [ requestUpdate %tmp.38 40 16 29 ];
-        %tmp.38 = getv function %tmp.37 :requestUpdate;
-        invoke %tmp.37 %tmp.38();
-_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_25_35_41_4_stop:
+        symbol [ isSaunaMode %tmp.19 26 22 33 ];
+        %tmp.19 = getv %tmp.18 :isSaunaMode;
+        bf %tmp.19 @_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_26_12_45_12_if_else_false;
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_26_12_45_12_if_true:
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_26_35_41_12_start:
+[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 29 16 ]
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_29_16_40_16_if_stmt:
+        symbol [ mData %tmp.21 29 20 25 ];
+        %tmp.21 = getv ? :mData;
+        symbol [ timeLeft %tmp.22 29 26 34 ];
+        %tmp.22 = getv %tmp.21 :timeLeft;
+        %tmp.23 = 0;
+        %tmp.24 = gt %tmp.22 %tmp.23;
+        bf %tmp.24 @_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_29_16_40_16_if_else_false;
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_29_16_40_16_if_true:
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_29_40_35_16_start:
+[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 30 20 ]
+        symbol [ mData %tmp.25 30 20 25 ];
+        %tmp.25 = getv self :mData;
+        symbol [ mData %tmp.28 30 20 25 ];
+        %tmp.28 = getv ? :mData;
+        symbol [ timeLeft %tmp.29 30 26 34 ];
+        %tmp.29 = getv %tmp.28 :timeLeft;
+        %tmp.30 = sub %tmp.29 1;
+        symbol [ timeLeft ? 30 26 34 ];
+        putv %tmp.25 :timeLeft dup %tmp.30;
+[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 32 20 ]
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_32_20_34_20_if_stmt:
+        symbol [ mData %tmp.32 32 24 29 ];
+        %tmp.32 = getv ? :mData;
+        symbol [ timeLeft %tmp.33 32 30 38 ];
+        %tmp.33 = getv %tmp.32 :timeLeft;
+        %tmp.34 = 0;
+        %tmp.35 = eq %tmp.33 %tmp.34;
+        bf %tmp.35 @_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_32_20_34_20_if_end;
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_32_20_34_20_if_true:
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_32_45_34_20_start:
+[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 33 24 ]
+        %tmp.36 = self;
+        symbol [ vibrateLong %tmp.37 33 24 35 ];
+        %tmp.37 = getv function %tmp.36 :vibrateLong;
+        invoke %tmp.36 %tmp.37();
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_32_45_34_20_stop:
+        goto @_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_32_20_34_20_if_end;
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_32_20_34_20_if_end:
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_29_40_35_16_stop:
+        goto @_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_29_16_40_16_if_end;
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_29_16_40_16_if_else_false:
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_35_23_40_16_start:
+[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 39 20 ]
+        symbol [ mData %tmp.38 39 20 25 ];
+        %tmp.38 = getv self :mData;
+        symbol [ mData %tmp.41 39 20 25 ];
+        %tmp.41 = getv ? :mData;
+        symbol [ timeLeft %tmp.42 39 26 34 ];
+        %tmp.42 = getv %tmp.41 :timeLeft;
+        %tmp.43 = sub %tmp.42 1;
+        symbol [ timeLeft ? 39 26 34 ];
+        putv %tmp.38 :timeLeft dup %tmp.43;
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_35_23_40_16_stop:
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_29_16_40_16_if_end:
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_26_35_41_12_stop:
+        goto @_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_26_12_45_12_if_end;
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_26_12_45_12_if_else_false:
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_41_19_45_12_start:
+[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 44 16 ]
+        symbol [ mData %tmp.44 44 16 21 ];
+        %tmp.44 = getv self :mData;
+        symbol [ mData %tmp.47 44 16 21 ];
+        %tmp.47 = getv ? :mData;
+        symbol [ timeLeft %tmp.48 44 22 30 ];
+        %tmp.48 = getv %tmp.47 :timeLeft;
+        %tmp.49 = add %tmp.48 1;
+        symbol [ timeLeft ? 44 22 30 ];
+        putv %tmp.44 :timeLeft dup %tmp.49;
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_41_19_45_12_stop:
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_26_12_45_12_if_end:
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_23_54_46_8_stop:
+        goto @_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_23_8_46_8_if_end;
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_23_8_46_8_if_end:
+[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 47 8 ]
+        symbol [ WatchUi %tmp.50 47 8 15 ];
+        %tmp.50 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.51 47 16 29 ];
+        %tmp.51 = getv function %tmp.50 :requestUpdate;
+        invoke %tmp.50 %tmp.51();
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_22_35_48_4_stop:
     }
-    [ @file = "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc"; @line = 44; @symbol_functiondef = [onSelect,44,13,21]; @symbol_return<0> = [Toybox,44,27,33]; @symbol_return<1> = [Lang,44,34,38]; @symbol_return<2> = [Boolean,44,39,46]; ]
-    function onSelect() as Toybox.Lang.Boolean {
-_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_44_47_68_4_start:
-[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 45 8 ]
-_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_45_8_66_8_if_stmt:
-        symbol [ session %tmp.2 45 12 19 ];
+    [ @file = "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc"; @line = 51; @symbol_functiondef = [onSelect,51,13,21]; @symbol_return<0> = [Boolean,51,27,34]; ]
+    function onSelect() as Boolean {
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_51_35_75_4_start:
+[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 52 8 ]
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_52_8_73_8_if_stmt:
+        symbol [ session %tmp.2 52 12 19 ];
         %tmp.2 = getv ? :session;
         %tmp.3 = null;
         %tmp.4 = eq %tmp.2 %tmp.3;
-        bf %tmp.4 @_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_45_8_66_8_if_false;
-_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_45_8_66_8_if_true:
-_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_45_29_55_8_start:
-[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 47 12 ]
-        symbol [ ActivityRecording %tmp.5 47 22 39 ];
-        %tmp.5 = getm $.Toybox.ActivityRecording;
-        symbol [ createSession %tmp.6 47 40 53 ];
-        %tmp.6 = getv function %tmp.5 :createSession;
-        %tmp.7 = newd 3;
-        %tmp.9 = const :name;
-        symbol [ name %tmp.9 48 17 21 const ];
-        %tmp.10 = "Sauna";
-        %tmp.11 = dup %tmp.7;
-        %tmp.12 = aputv %tmp.11 %tmp.9 %tmp.10;
-        %tmp.14 = const :sport;
-        symbol [ sport %tmp.14 49 17 22 const ];
-        symbol [ ActivityRecording %tmp.15 49 26 43 ];
-        %tmp.15 = getm $.Toybox.ActivityRecording;
-        symbol [ SPORT_GENERIC %tmp.16 49 44 57 ];
-        %tmp.16 = getv %tmp.15 :SPORT_GENERIC;
-        %tmp.17 = dup %tmp.12;
-        %tmp.18 = aputv %tmp.17 %tmp.14 %tmp.16;
-        %tmp.20 = const :subSport;
-        symbol [ subSport %tmp.20 50 17 25 const ];
-        symbol [ ActivityRecording %tmp.21 50 29 46 ];
-        %tmp.21 = getm $.Toybox.ActivityRecording;
-        symbol [ SUB_SPORT_GENERIC %tmp.22 50 47 64 ];
-        %tmp.22 = getv %tmp.21 :SUB_SPORT_GENERIC;
-        %tmp.23 = dup %tmp.18;
-        %tmp.24 = aputv %tmp.23 %tmp.20 %tmp.22;
-        %tmp.25 = invoke %tmp.5 %tmp.6(%tmp.24);
-        symbol [ session ? 47 12 19 ];
-        putv self :session %tmp.25;
-[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 52 12 ]
-        symbol [ session %tmp.27 52 12 19 ];
-        %tmp.27 = getv ? :session;
-        symbol [ start %tmp.28 52 20 25 ];
-        %tmp.28 = getv function %tmp.27 :start;
-        invoke %tmp.27 %tmp.28();
-[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 53 12 ]
-        %tmp.29 = self;
-        symbol [ vibrateShort %tmp.30 53 12 24 ];
-        %tmp.30 = getv function %tmp.29 :vibrateShort;
-        invoke %tmp.29 %tmp.30();
+        bf %tmp.4 @_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_52_8_73_8_if_else_false;
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_52_8_73_8_if_true:
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_52_29_60_8_start:
 [ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 54 12 ]
-        %tmp.31 = self;
-        symbol [ startSaunaRound %tmp.32 54 12 27 ];
-        %tmp.32 = getv function %tmp.31 :startSaunaRound;
-        invoke %tmp.31 %tmp.32();
-_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_45_29_55_8_stop:
-        goto @_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_45_8_66_8_if_end;
-_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_45_8_66_8_if_false:
-[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 56 13 ]
-_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_56_13_66_8_if_stmt:
-        symbol [ mData %tmp.34 56 17 22 ];
-        %tmp.34 = getv ? :mData;
-        symbol [ isSaunaMode %tmp.35 56 23 34 ];
-        %tmp.35 = getv %tmp.34 :isSaunaMode;
-        bf %tmp.35 @_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_56_13_66_8_if_else_false;
-_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_56_13_66_8_if_true:
-_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_56_36_61_8_start:
+        %tmp.5 = self;
+        symbol [ createSession %tmp.6 54 12 25 ];
+        %tmp.6 = getv function %tmp.5 :createSession;
+        invoke %tmp.5 %tmp.6();
+[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 55 12 ]
+        symbol [ mData %tmp.7 55 12 17 ];
+        %tmp.7 = getv self :mData;
+        %tmp.8 = true;
+        symbol [ isSessionActive ? 55 18 33 ];
+        putv %tmp.7 :isSessionActive %tmp.8;
+[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 56 12 ]
+        symbol [ mData %tmp.9 56 12 17 ];
+        %tmp.9 = getv self :mData;
+        %tmp.10 = true;
+        symbol [ isSaunaMode ? 56 18 29 ];
+        putv %tmp.9 :isSaunaMode %tmp.10;
+[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 57 12 ]
+        symbol [ mData %tmp.11 57 12 17 ];
+        %tmp.11 = getv self :mData;
+        symbol [ mData %tmp.13 57 29 34 ];
+        %tmp.13 = getv ? :mData;
+        symbol [ durationConfig %tmp.14 57 35 49 ];
+        %tmp.14 = getv %tmp.13 :durationConfig;
+        symbol [ timeLeft ? 57 18 26 ];
+        putv %tmp.11 :timeLeft %tmp.14;
 [ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 58 12 ]
-        symbol [ mData %tmp.36 58 12 17 ];
-        %tmp.36 = getv self :mData;
-        %tmp.37 = false;
-        symbol [ isSaunaMode ? 58 18 29 ];
-        putv %tmp.36 :isSaunaMode %tmp.37;
+        symbol [ mData %tmp.15 58 12 17 ];
+        %tmp.15 = getv self :mData;
+        %tmp.16 = 1;
+        symbol [ round ? 58 18 23 ];
+        putv %tmp.15 :round %tmp.16;
 [ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 59 12 ]
-        symbol [ mData %tmp.38 59 12 17 ];
-        %tmp.38 = getv self :mData;
-        %tmp.39 = 0;
-        symbol [ timeLeft ? 59 18 26 ];
-        putv %tmp.38 :timeLeft %tmp.39;
-[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 60 12 ]
-        %tmp.40 = self;
-        symbol [ vibrateShort %tmp.41 60 12 24 ];
-        %tmp.41 = getv function %tmp.40 :vibrateShort;
-        invoke %tmp.40 %tmp.41();
-_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_56_36_61_8_stop:
-        goto @_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_56_13_66_8_if_end;
-_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_56_13_66_8_if_else_false:
-_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_62_13_66_8_start:
-[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 64 12 ]
-        %tmp.42 = self;
-        symbol [ startSaunaRound %tmp.43 64 12 27 ];
-        %tmp.43 = getv function %tmp.42 :startSaunaRound;
-        invoke %tmp.42 %tmp.43();
-[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 65 12 ]
-        %tmp.44 = self;
-        symbol [ vibrateShort %tmp.45 65 12 24 ];
-        %tmp.45 = getv function %tmp.44 :vibrateShort;
-        invoke %tmp.44 %tmp.45();
-_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_62_13_66_8_stop:
-_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_56_13_66_8_if_end:
-_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_45_8_66_8_if_end:
-[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 67 8 ]
-        %tmp.46 = true;
-        ret %tmp.46;
-_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_44_47_68_4_stop:
+        %tmp.17 = self;
+        symbol [ vibrateShort %tmp.18 59 12 24 ];
+        %tmp.18 = getv function %tmp.17 :vibrateShort;
+        invoke %tmp.17 %tmp.18();
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_52_29_60_8_stop:
+        goto @_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_52_8_73_8_if_end;
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_52_8_73_8_if_else_false:
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_61_13_73_8_start:
+[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 62 12 ]
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_62_12_71_12_if_stmt:
+        symbol [ mData %tmp.20 62 16 21 ];
+        %tmp.20 = getv ? :mData;
+        symbol [ isSaunaMode %tmp.21 62 22 33 ];
+        %tmp.21 = getv %tmp.20 :isSaunaMode;
+        bf %tmp.21 @_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_62_12_71_12_if_else_false;
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_62_12_71_12_if_true:
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_62_35_66_12_start:
+[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 64 16 ]
+        symbol [ mData %tmp.22 64 16 21 ];
+        %tmp.22 = getv self :mData;
+        %tmp.23 = false;
+        symbol [ isSaunaMode ? 64 22 33 ];
+        putv %tmp.22 :isSaunaMode %tmp.23;
+[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 65 16 ]
+        symbol [ mData %tmp.24 65 16 21 ];
+        %tmp.24 = getv self :mData;
+        %tmp.25 = 0;
+        symbol [ timeLeft ? 65 22 30 ];
+        putv %tmp.24 :timeLeft %tmp.25;
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_62_35_66_12_stop:
+        goto @_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_62_12_71_12_if_end;
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_62_12_71_12_if_else_false:
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_66_19_71_12_start:
+[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 68 16 ]
+        symbol [ mData %tmp.26 68 16 21 ];
+        %tmp.26 = getv self :mData;
+        %tmp.27 = true;
+        symbol [ isSaunaMode ? 68 22 33 ];
+        putv %tmp.26 :isSaunaMode %tmp.27;
+[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 69 16 ]
+        symbol [ mData %tmp.28 69 16 21 ];
+        %tmp.28 = getv self :mData;
+        symbol [ mData %tmp.30 69 33 38 ];
+        %tmp.30 = getv ? :mData;
+        symbol [ durationConfig %tmp.31 69 39 53 ];
+        %tmp.31 = getv %tmp.30 :durationConfig;
+        symbol [ timeLeft ? 69 22 30 ];
+        putv %tmp.28 :timeLeft %tmp.31;
+[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 70 16 ]
+        symbol [ mData %tmp.32 70 16 21 ];
+        %tmp.32 = getv self :mData;
+        symbol [ mData %tmp.35 70 16 21 ];
+        %tmp.35 = getv ? :mData;
+        symbol [ round %tmp.36 70 22 27 ];
+        %tmp.36 = getv %tmp.35 :round;
+        %tmp.37 = add %tmp.36 1;
+        symbol [ round ? 70 22 27 ];
+        putv %tmp.32 :round dup %tmp.37;
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_66_19_71_12_stop:
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_62_12_71_12_if_end:
+[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 72 12 ]
+        %tmp.38 = self;
+        symbol [ vibrateShort %tmp.39 72 12 24 ];
+        %tmp.39 = getv function %tmp.38 :vibrateShort;
+        invoke %tmp.38 %tmp.39();
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_61_13_73_8_stop:
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_52_8_73_8_if_end:
+[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 74 8 ]
+        %tmp.40 = true;
+        ret %tmp.40;
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_51_35_75_4_stop:
     }
-    [ @file = "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc"; @line = 70; @symbol_functiondef = [startSaunaRound,70,13,28]; ]
-    function startSaunaRound() {
-_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_70_31_74_4_start:
-[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 71 8 ]
-        symbol [ mData %tmp.1 71 8 13 ];
-        %tmp.1 = getv self :mData;
-        %tmp.2 = true;
-        symbol [ isSaunaMode ? 71 14 25 ];
-        putv %tmp.1 :isSaunaMode %tmp.2;
-[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 72 8 ]
-        symbol [ mData %tmp.3 72 8 13 ];
-        %tmp.3 = getv self :mData;
-        symbol [ SAUNA_DURATION %tmp.5 72 25 39 ];
-        %tmp.5 = getv ? :SAUNA_DURATION;
-        symbol [ timeLeft ? 72 14 22 ];
-        putv %tmp.3 :timeLeft %tmp.5;
-[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 73 8 ]
-        symbol [ mData %tmp.6 73 8 13 ];
+    [ @file = "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc"; @line = 78; @symbol_functiondef = [onPreviousPage,78,13,27]; @symbol_return<0> = [Boolean,78,33,40]; ]
+    function onPreviousPage() as Boolean {
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_78_41_78_66_start:
+[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 78 43 ]
+        %tmp.1 = self;
+        symbol [ adjustTime %tmp.2 78 50 60 ];
+        %tmp.2 = getv function %tmp.1 :adjustTime;
+        %tmp.3 = 60;
+        %tmp.4 = invoke %tmp.1 %tmp.2(%tmp.3);
+        ret %tmp.4;
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_78_41_78_66_stop:
+    }
+    [ @file = "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc"; @line = 80; @symbol_functiondef = [onNextPage,80,13,23]; @symbol_return<0> = [Boolean,80,29,36]; ]
+    function onNextPage() as Boolean {
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_80_37_108_4_start:
+[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 82 8 ]
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_82_8_104_8_if_stmt:
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_82_12_82_52_begin:
+        symbol [ mData %tmp.2 82 12 17 ];
+        %tmp.2 = getv ? :mData;
+        symbol [ isSessionActive %tmp.3 82 18 33 ];
+        %tmp.3 = getv %tmp.2 :isSessionActive;
+        bf %tmp.3 @_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_82_8_104_8_if_end;
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_82_37_82_52_true:
+        symbol [ mData %tmp.5 82 37 42 ];
+        %tmp.5 = getv ? :mData;
+        symbol [ round %tmp.6 82 43 48 ];
+        %tmp.6 = getv %tmp.5 :round;
+        %tmp.7 = 1;
+        %tmp.8 = eq %tmp.6 %tmp.7;
+        push %tmp.8;
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_82_37_82_52_end:
+        %tmp.9 = phi [%tmp.3 @_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_82_12_82_52_begin] [%tmp.8 @_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_82_37_82_52_true] [%tmp.9 @_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_82_37_82_52_end];
+        bf %tmp.9 @_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_82_8_104_8_if_end;
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_82_8_104_8_if_true:
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_82_55_104_8_start:
+[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 83 12 ]
+        symbol [ System %tmp.10 83 12 18 ];
+        %tmp.10 = getm $.Toybox.System;
+        symbol [ println %tmp.11 83 19 26 ];
+        %tmp.11 = getv function %tmp.10 :println;
+        %tmp.12 = "DOWN button pressed - discarding session in Round 1";
+        invoke %tmp.10 %tmp.11(%tmp.12);
+[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 86 12 ]
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_86_12_90_12_if_stmt:
+        symbol [ session %tmp.14 86 16 23 ];
+        %tmp.14 = getv ? :session;
+        %tmp.15 = null;
+        %tmp.16 = ne %tmp.14 %tmp.15;
+        bf %tmp.16 @_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_86_12_90_12_if_end;
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_86_12_90_12_if_true:
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_86_33_90_12_start:
+[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 87 16 ]
+        symbol [ session %tmp.18 87 16 23 ];
+        %tmp.18 = getv ? :session;
+        %tmp.19 = as %tmp.18 { (!Null) };
+        symbol [ stop %tmp.20 87 24 28 ];
+        %tmp.20 = getv function %tmp.19 :stop;
+        invoke %tmp.19 %tmp.20();
+[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 88 16 ]
+        symbol [ session %tmp.22 88 16 23 ];
+        %tmp.22 = getv ? :session;
+        symbol [ discard %tmp.23 88 24 31 ];
+        %tmp.23 = getv function %tmp.22 :discard;
+        invoke %tmp.22 %tmp.23();
+[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 89 16 ]
+        symbol [ System %tmp.24 89 16 22 ];
+        %tmp.24 = getm $.Toybox.System;
+        symbol [ println %tmp.25 89 23 30 ];
+        %tmp.25 = getv function %tmp.24 :println;
+        %tmp.26 = "Session discarded";
+        invoke %tmp.24 %tmp.25(%tmp.26);
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_86_33_90_12_stop:
+        goto @_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_86_12_90_12_if_end;
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_86_12_90_12_if_end:
+[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 93 12 ]
+        %tmp.27 = null;
+        symbol [ session ? 93 12 19 ];
+        putv self :session %tmp.27;
+[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 94 12 ]
+        symbol [ mData %tmp.28 94 12 17 ];
+        %tmp.28 = getv self :mData;
+        %tmp.29 = false;
+        symbol [ isSessionActive ? 94 18 33 ];
+        putv %tmp.28 :isSessionActive %tmp.29;
+[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 95 12 ]
+        symbol [ mData %tmp.30 95 12 17 ];
+        %tmp.30 = getv self :mData;
+        %tmp.31 = true;
+        symbol [ isSaunaMode ? 95 18 29 ];
+        putv %tmp.30 :isSaunaMode %tmp.31;
+[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 96 12 ]
+        symbol [ mData %tmp.32 96 12 17 ];
+        %tmp.32 = getv self :mData;
+        %tmp.33 = 0;
+        symbol [ round ? 96 18 23 ];
+        putv %tmp.32 :round %tmp.33;
+[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 97 12 ]
+        symbol [ mData %tmp.34 97 12 17 ];
+        %tmp.34 = getv self :mData;
+        %tmp.35 = 0;
+        symbol [ totalDuration ? 97 18 31 ];
+        putv %tmp.34 :totalDuration %tmp.35;
+[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 98 12 ]
+        symbol [ mData %tmp.36 98 12 17 ];
+        %tmp.36 = getv self :mData;
+        symbol [ mData %tmp.38 98 29 34 ];
+        %tmp.38 = getv ? :mData;
+        symbol [ durationConfig %tmp.39 98 35 49 ];
+        %tmp.39 = getv %tmp.38 :durationConfig;
+        symbol [ timeLeft ? 98 18 26 ];
+        putv %tmp.36 :timeLeft %tmp.39;
+[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 101 12 ]
+        symbol [ System %tmp.40 101 12 18 ];
+        %tmp.40 = getm $.Toybox.System;
+        symbol [ println %tmp.41 101 19 26 ];
+        %tmp.41 = getv function %tmp.40 :println;
+        %tmp.42 = "Exiting app...";
+        invoke %tmp.40 %tmp.41(%tmp.42);
+[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 102 12 ]
+        symbol [ System %tmp.43 102 12 18 ];
+        %tmp.43 = getm $.Toybox.System;
+        symbol [ exit %tmp.44 102 19 23 ];
+        %tmp.44 = getv function %tmp.43 :exit;
+        invoke %tmp.43 %tmp.44();
+[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 103 12 ]
+        %tmp.45 = true;
+        ret %tmp.45;
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_82_55_104_8_stop:
+        goto @_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_82_8_104_8_if_end;
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_82_8_104_8_if_end:
+[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 107 8 ]
+        %tmp.46 = self;
+        symbol [ adjustTime %tmp.47 107 15 25 ];
+        %tmp.47 = getv function %tmp.46 :adjustTime;
+        %tmp.48 = -60;
+        %tmp.49 = invoke %tmp.46 %tmp.47(%tmp.48);
+        ret %tmp.49;
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_80_37_108_4_stop:
+    }
+    [ @file = "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc"; @line = 110; @symbol_functiondef = [adjustTime,110,13,23]; @symbol_param<0> = [seconds,110,24,31]; @symbol_return<0> = [Boolean,110,36,43]; ]
+    function adjustTime(seconds) as Boolean {
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_110_44_119_4_start:
+[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 111 8 ]
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_111_8_117_8_if_stmt:
+        symbol [ session %tmp.2 111 12 19 ];
+        %tmp.2 = getv ? :session;
+        %tmp.3 = null;
+        %tmp.4 = eq %tmp.2 %tmp.3;
+        bf %tmp.4 @_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_111_8_117_8_if_end;
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_111_8_117_8_if_true:
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_111_29_117_8_start:
+[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 112 12 ]
+        symbol [ mData %tmp.5 112 12 17 ];
+        %tmp.5 = getv self :mData;
+        symbol [ mData %tmp.6 112 12 17 ];
         %tmp.6 = getv self :mData;
-        symbol [ mData %tmp.9 73 8 13 ];
-        %tmp.9 = getv ? :mData;
-        symbol [ round %tmp.10 73 14 19 ];
-        %tmp.10 = getv %tmp.9 :round;
-        %tmp.11 = add %tmp.10 1;
-        symbol [ round ? 73 14 19 ];
-        putv %tmp.6 :round dup %tmp.11;
-_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_70_31_74_4_stop:
+        symbol [ durationConfig %tmp.7 112 18 32 ];
+        %tmp.7 = getv %tmp.6 :durationConfig;
+        %tmp.8 = lgetv %seconds;
+        symbol [ seconds %tmp.8 112 36 43 ];
+        %tmp.9 = add %tmp.7 %tmp.8;
+        symbol [ durationConfig ? 112 18 32 ];
+        putv %tmp.5 :durationConfig dup %tmp.9;
+[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 113 12 ]
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_113_12_113_72_if_stmt:
+        symbol [ mData %tmp.11 113 16 21 ];
+        %tmp.11 = getv ? :mData;
+        symbol [ durationConfig %tmp.12 113 22 36 ];
+        %tmp.12 = getv %tmp.11 :durationConfig;
+        %tmp.13 = 60;
+        %tmp.14 = lt %tmp.12 %tmp.13;
+        bf %tmp.14 @_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_113_12_113_72_if_end;
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_113_12_113_72_if_true:
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_113_43_113_72_start:
+[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 113 45 ]
+        symbol [ mData %tmp.15 113 45 50 ];
+        %tmp.15 = getv self :mData;
+        %tmp.16 = 60;
+        symbol [ durationConfig ? 113 51 65 ];
+        putv %tmp.15 :durationConfig %tmp.16;
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_113_43_113_72_stop:
+        goto @_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_113_12_113_72_if_end;
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_113_12_113_72_if_end:
+[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 114 12 ]
+        symbol [ mData %tmp.17 114 12 17 ];
+        %tmp.17 = getv self :mData;
+        symbol [ mData %tmp.19 114 29 34 ];
+        %tmp.19 = getv ? :mData;
+        symbol [ durationConfig %tmp.20 114 35 49 ];
+        %tmp.20 = getv %tmp.19 :durationConfig;
+        symbol [ timeLeft ? 114 18 26 ];
+        putv %tmp.17 :timeLeft %tmp.20;
+[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 115 12 ]
+        symbol [ WatchUi %tmp.21 115 12 19 ];
+        %tmp.21 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.22 115 20 33 ];
+        %tmp.22 = getv function %tmp.21 :requestUpdate;
+        invoke %tmp.21 %tmp.22();
+[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 116 12 ]
+        %tmp.23 = true;
+        ret %tmp.23;
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_111_29_117_8_stop:
+        goto @_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_111_8_117_8_if_end;
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_111_8_117_8_if_end:
+[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 118 8 ]
+        %tmp.24 = false;
+        ret %tmp.24;
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_110_44_119_4_stop:
     }
-    [ @file = "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc"; @line = 77; @symbol_functiondef = [onBack,77,13,19]; @symbol_return<0> = [Toybox,77,25,31]; @symbol_return<1> = [Lang,77,32,36]; @symbol_return<2> = [Boolean,77,37,44]; ]
-    function onBack() as Toybox.Lang.Boolean {
-_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_77_45_85_4_start:
-[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 78 8 ]
-_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_78_8_82_8_if_stmt:
-        symbol [ session %tmp.2 78 12 19 ];
+    [ @file = "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc"; @line = 122; @symbol_functiondef = [onMenu,122,13,19]; @symbol_return<0> = [Boolean,122,25,32]; ]
+    function onMenu() as Boolean {
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_122_33_150_4_start:
+[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 123 8 ]
+        symbol [ System %tmp.1 123 8 14 ];
+        %tmp.1 = getm $.Toybox.System;
+        symbol [ println %tmp.2 123 15 22 ];
+        %tmp.2 = getv function %tmp.1 :println;
+        %tmp.3 = "ABC button pressed! Active: ";
+        symbol [ mData %tmp.5 123 56 61 ];
+        %tmp.5 = getv ? :mData;
+        symbol [ isSessionActive %tmp.6 123 62 77 ];
+        %tmp.6 = getv %tmp.5 :isSessionActive;
+        %tmp.7 = add %tmp.3 %tmp.6;
+        %tmp.8 = ", Round: ";
+        %tmp.9 = add %tmp.7 %tmp.8;
+        symbol [ mData %tmp.11 123 94 99 ];
+        %tmp.11 = getv ? :mData;
+        symbol [ round %tmp.12 123 100 105 ];
+        %tmp.12 = getv %tmp.11 :round;
+        %tmp.13 = add %tmp.9 %tmp.12;
+        invoke %tmp.1 %tmp.2(%tmp.13);
+[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 126 8 ]
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_126_8_147_8_if_stmt:
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_126_12_126_52_begin:
+        symbol [ mData %tmp.15 126 12 17 ];
+        %tmp.15 = getv ? :mData;
+        symbol [ isSessionActive %tmp.16 126 18 33 ];
+        %tmp.16 = getv %tmp.15 :isSessionActive;
+        bf %tmp.16 @_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_126_8_147_8_if_end;
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_126_37_126_52_true:
+        symbol [ mData %tmp.18 126 37 42 ];
+        %tmp.18 = getv ? :mData;
+        symbol [ round %tmp.19 126 43 48 ];
+        %tmp.19 = getv %tmp.18 :round;
+        %tmp.20 = 1;
+        %tmp.21 = eq %tmp.19 %tmp.20;
+        push %tmp.21;
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_126_37_126_52_end:
+        %tmp.22 = phi [%tmp.16 @_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_126_12_126_52_begin] [%tmp.21 @_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_126_37_126_52_true] [%tmp.22 @_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_126_37_126_52_end];
+        bf %tmp.22 @_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_126_8_147_8_if_end;
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_126_8_147_8_if_true:
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_126_55_147_8_start:
+[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 127 12 ]
+        symbol [ System %tmp.23 127 12 18 ];
+        %tmp.23 = getm $.Toybox.System;
+        symbol [ println %tmp.24 127 19 26 ];
+        %tmp.24 = getv function %tmp.23 :println;
+        %tmp.25 = "Discarding session...";
+        invoke %tmp.23 %tmp.24(%tmp.25);
+[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 130 12 ]
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_130_12_134_12_if_stmt:
+        symbol [ session %tmp.27 130 16 23 ];
+        %tmp.27 = getv ? :session;
+        %tmp.28 = null;
+        %tmp.29 = ne %tmp.27 %tmp.28;
+        bf %tmp.29 @_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_130_12_134_12_if_end;
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_130_12_134_12_if_true:
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_130_33_134_12_start:
+[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 131 16 ]
+        symbol [ session %tmp.31 131 16 23 ];
+        %tmp.31 = getv ? :session;
+        %tmp.32 = as %tmp.31 { (!Null) };
+        symbol [ stop %tmp.33 131 24 28 ];
+        %tmp.33 = getv function %tmp.32 :stop;
+        invoke %tmp.32 %tmp.33();
+[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 132 16 ]
+        symbol [ session %tmp.35 132 16 23 ];
+        %tmp.35 = getv ? :session;
+        symbol [ discard %tmp.36 132 24 31 ];
+        %tmp.36 = getv function %tmp.35 :discard;
+        invoke %tmp.35 %tmp.36();
+[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 133 16 ]
+        symbol [ System %tmp.37 133 16 22 ];
+        %tmp.37 = getm $.Toybox.System;
+        symbol [ println %tmp.38 133 23 30 ];
+        %tmp.38 = getv function %tmp.37 :println;
+        %tmp.39 = "Session discarded";
+        invoke %tmp.37 %tmp.38(%tmp.39);
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_130_33_134_12_stop:
+        goto @_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_130_12_134_12_if_end;
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_130_12_134_12_if_end:
+[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 136 12 ]
+        %tmp.40 = null;
+        symbol [ session ? 136 12 19 ];
+        putv self :session %tmp.40;
+[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 137 12 ]
+        symbol [ mData %tmp.41 137 12 17 ];
+        %tmp.41 = getv self :mData;
+        %tmp.42 = false;
+        symbol [ isSessionActive ? 137 18 33 ];
+        putv %tmp.41 :isSessionActive %tmp.42;
+[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 138 12 ]
+        symbol [ mData %tmp.43 138 12 17 ];
+        %tmp.43 = getv self :mData;
+        %tmp.44 = true;
+        symbol [ isSaunaMode ? 138 18 29 ];
+        putv %tmp.43 :isSaunaMode %tmp.44;
+[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 139 12 ]
+        symbol [ mData %tmp.45 139 12 17 ];
+        %tmp.45 = getv self :mData;
+        %tmp.46 = 0;
+        symbol [ round ? 139 18 23 ];
+        putv %tmp.45 :round %tmp.46;
+[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 140 12 ]
+        symbol [ mData %tmp.47 140 12 17 ];
+        %tmp.47 = getv self :mData;
+        %tmp.48 = 0;
+        symbol [ totalDuration ? 140 18 31 ];
+        putv %tmp.47 :totalDuration %tmp.48;
+[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 141 12 ]
+        symbol [ mData %tmp.49 141 12 17 ];
+        %tmp.49 = getv self :mData;
+        symbol [ mData %tmp.51 141 29 34 ];
+        %tmp.51 = getv ? :mData;
+        symbol [ durationConfig %tmp.52 141 35 49 ];
+        %tmp.52 = getv %tmp.51 :durationConfig;
+        symbol [ timeLeft ? 141 18 26 ];
+        putv %tmp.49 :timeLeft %tmp.52;
+[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 144 12 ]
+        symbol [ System %tmp.53 144 12 18 ];
+        %tmp.53 = getm $.Toybox.System;
+        symbol [ println %tmp.54 144 19 26 ];
+        %tmp.54 = getv function %tmp.53 :println;
+        %tmp.55 = "Exiting app...";
+        invoke %tmp.53 %tmp.54(%tmp.55);
+[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 145 12 ]
+        symbol [ System %tmp.56 145 12 18 ];
+        %tmp.56 = getm $.Toybox.System;
+        symbol [ exit %tmp.57 145 19 23 ];
+        %tmp.57 = getv function %tmp.56 :exit;
+        invoke %tmp.56 %tmp.57();
+[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 146 12 ]
+        %tmp.58 = true;
+        ret %tmp.58;
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_126_55_147_8_stop:
+        goto @_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_126_8_147_8_if_end;
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_126_8_147_8_if_end:
+[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 148 8 ]
+        symbol [ System %tmp.59 148 8 14 ];
+        %tmp.59 = getm $.Toybox.System;
+        symbol [ println %tmp.60 148 15 22 ];
+        %tmp.60 = getv function %tmp.59 :println;
+        %tmp.61 = "ABC button ignored (not in round 1)";
+        invoke %tmp.59 %tmp.60(%tmp.61);
+[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 149 8 ]
+        %tmp.62 = false;
+        ret %tmp.62;
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_122_33_150_4_stop:
+    }
+    [ @file = "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc"; @line = 153; @symbol_functiondef = [onBack,153,13,19]; @symbol_return<0> = [Boolean,153,25,32]; ]
+    function onBack() as Boolean {
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_153_33_162_4_start:
+[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 155 8 ]
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_155_8_158_8_if_stmt:
+        symbol [ session %tmp.2 155 12 19 ];
         %tmp.2 = getv ? :session;
         %tmp.3 = null;
         %tmp.4 = ne %tmp.2 %tmp.3;
-        bf %tmp.4 @_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_78_8_82_8_if_end;
-_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_78_8_82_8_if_true:
-_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_78_29_82_8_start:
-[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 79 12 ]
-        symbol [ session %tmp.6 79 12 19 ];
+        bf %tmp.4 @_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_155_8_158_8_if_end;
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_155_8_158_8_if_true:
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_155_29_158_8_start:
+[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 156 12 ]
+        symbol [ session %tmp.6 156 12 19 ];
         %tmp.6 = getv ? :session;
         %tmp.7 = as %tmp.6 { (!Null) };
-        symbol [ stop %tmp.8 79 20 24 ];
+        symbol [ stop %tmp.8 156 20 24 ];
         %tmp.8 = getv function %tmp.7 :stop;
         invoke %tmp.7 %tmp.8();
-[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 80 12 ]
-        symbol [ session %tmp.10 80 12 19 ];
+[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 157 12 ]
+        symbol [ session %tmp.10 157 12 19 ];
         %tmp.10 = getv ? :session;
-        symbol [ save %tmp.11 80 20 24 ];
+        symbol [ save %tmp.11 157 20 24 ];
         %tmp.11 = getv function %tmp.10 :save;
         invoke %tmp.10 %tmp.11();
-[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 81 12 ]
-        %tmp.12 = null;
-        symbol [ session ? 81 12 19 ];
-        putv self :session %tmp.12;
-_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_78_29_82_8_stop:
-        goto @_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_78_8_82_8_if_end;
-_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_78_8_82_8_if_end:
-[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 83 8 ]
-        symbol [ System %tmp.13 83 8 14 ];
-        %tmp.13 = getm $.Toybox.System;
-        symbol [ exit %tmp.14 83 15 19 ];
-        %tmp.14 = getv function %tmp.13 :exit;
-        invoke %tmp.13 %tmp.14();
-[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 84 8 ]
-        %tmp.15 = true;
-        ret %tmp.15;
-_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_77_45_85_4_stop:
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_155_29_158_8_stop:
+        goto @_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_155_8_158_8_if_end;
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_155_8_158_8_if_end:
+[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 160 8 ]
+        symbol [ System %tmp.12 160 8 14 ];
+        %tmp.12 = getm $.Toybox.System;
+        symbol [ exit %tmp.13 160 15 19 ];
+        %tmp.13 = getv function %tmp.12 :exit;
+        invoke %tmp.12 %tmp.13();
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_153_33_162_4_stop:
     }
-    [ @file = "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc"; @line = 88; @symbol_functiondef = [vibrate,88,13,20]; ]
-    function vibrate() {
-_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_88_23_93_4_start:
-[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 89 8 ]
-_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_89_8_92_8_if_stmt:
-        symbol [ Attention %tmp.1 89 12 21 ];
+    [ @file = "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc"; @line = 164; @symbol_functiondef = [createSession,164,13,26]; ]
+    function createSession() {
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_164_29_175_4_start:
+[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 165 8 ]
+        try @_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_165_8_174_8_beginTry @_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_165_8_174_8_endTry @_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_165_8_174_8_catch @_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_165_8_174_8_finally;
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_165_8_174_8_beginTry:
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_165_12_172_8_start:
+[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 166 12 ]
+        symbol [ ActivityRecording %tmp.1 166 22 39 ];
+        %tmp.1 = getm $.Toybox.ActivityRecording;
+        symbol [ createSession %tmp.2 166 40 53 ];
+        %tmp.2 = getv function %tmp.1 :createSession;
+        %tmp.3 = newd 3;
+        %tmp.5 = const :name;
+        symbol [ name %tmp.5 167 17 21 const ];
+        %tmp.6 = "Sauna";
+        %tmp.7 = dup %tmp.3;
+        %tmp.8 = aputv %tmp.7 %tmp.5 %tmp.6;
+        %tmp.10 = const :sport;
+        symbol [ sport %tmp.10 168 17 22 const ];
+        symbol [ ActivityRecording %tmp.11 168 26 43 ];
+        %tmp.11 = getm $.Toybox.ActivityRecording;
+        symbol [ SPORT_TRAINING %tmp.12 168 44 58 ];
+        %tmp.12 = getv %tmp.11 :SPORT_TRAINING;
+        %tmp.13 = dup %tmp.8;
+        %tmp.14 = aputv %tmp.13 %tmp.10 %tmp.12;
+        %tmp.16 = const :subSport;
+        symbol [ subSport %tmp.16 169 17 25 const ];
+        symbol [ ActivityRecording %tmp.17 169 29 46 ];
+        %tmp.17 = getm $.Toybox.ActivityRecording;
+        symbol [ SUB_SPORT_STRENGTH_TRAINING %tmp.18 169 47 74 ];
+        %tmp.18 = getv %tmp.17 :SUB_SPORT_STRENGTH_TRAINING;
+        %tmp.19 = dup %tmp.14;
+        %tmp.20 = aputv %tmp.19 %tmp.16 %tmp.18;
+        %tmp.21 = invoke %tmp.1 %tmp.2(%tmp.20);
+        symbol [ session ? 166 12 19 ];
+        putv self :session %tmp.21;
+[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 171 12 ]
+        symbol [ session %tmp.23 171 12 19 ];
+        %tmp.23 = getv ? :session;
+        symbol [ start %tmp.24 171 20 25 ];
+        %tmp.24 = getv function %tmp.23 :start;
+        invoke %tmp.23 %tmp.24();
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_165_12_172_8_stop:
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_165_8_174_8_endTry:
+        jsr @_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_165_8_174_8_finally;
+        goto @_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_165_8_174_8_end;
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_165_8_174_8_catch:
+        %tmp.25 = exception;
+        push %tmp.25;
+[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 172 10 ]
+        [ "_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_165_8_174_8_catch" "_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_172_10_174_8_end" ]
+        %e.1 = local;
+        symbol [ e %e.1 172 16 17 ];
+        %tmp.26 = dup %tmp.25;
+        lputv %e.1 %tmp.26;
+        symbol [ e %e.1 172 16 17 ];
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_172_19_174_8_start:
+[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 173 12 ]
+        symbol [ System %tmp.27 173 12 18 ];
+        %tmp.27 = getm $.Toybox.System;
+        symbol [ println %tmp.28 173 19 26 ];
+        %tmp.28 = getv function %tmp.27 :println;
+        %tmp.29 = "Session Error";
+        invoke %tmp.27 %tmp.28(%tmp.29);
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_172_19_174_8_stop:
+        jsr @_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_165_8_174_8_finally;
+        pop;
+        goto @_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_165_8_174_8_end;
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_172_10_174_8_end:
+        try @_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_165_8_174_8_catch @_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_172_10_174_8_end @_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_172_10_174_8_end @_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_165_8_174_8_finally;
+        jsr @_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_165_8_174_8_finally;
+        throw %tmp.25;
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_165_8_174_8_finally:
+        jsrret;
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_165_8_174_8_end:
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_164_29_175_4_stop:
+    }
+    [ @file = "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc"; @line = 177; @symbol_functiondef = [vibrateLong,177,13,24]; ]
+    function vibrateLong() {
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_177_27_181_4_start:
+[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 178 8 ]
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_178_8_180_8_if_stmt:
+        symbol [ Attention %tmp.1 178 12 21 ];
         %tmp.1 = getm $.Toybox.Attention;
         %tmp.3 = const :vibrate;
-        symbol [ vibrate %tmp.3 89 27 34 const ];
+        symbol [ vibrate %tmp.3 178 27 34 const ];
         %tmp.4 = canhazplz %tmp.1 %tmp.3;
-        bf %tmp.4 @_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_89_8_92_8_if_end;
-_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_89_8_92_8_if_true:
-_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_89_36_92_8_start:
-[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 90 12 ]
-        [ "_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_89_36_92_8_start" "_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_89_36_92_8_stop" ]
-        %vibeData.1 = local;
-        symbol [ vibeData %vibeData.1 90 16 24 ];
-        %tmp.5 = newa 1;
-        symbol [ Attention %tmp.8 90 33 42 ];
-        %tmp.8 = getm $.Toybox.Attention;
-        symbol [ VibeProfile %tmp.9 90 43 54 ];
-        %tmp.9 = getv function ? %tmp.8 :VibeProfile;
-        %tmp.10 = 100;
-        %tmp.11 = 2000;
-        %tmp.6 = newc %tmp.9 (%tmp.10, %tmp.11);
-        %tmp.12 = dup %tmp.5;
-        %tmp.13 = aputv %tmp.12 0 %tmp.6;
-        lputv %vibeData.1 %tmp.13;
-        symbol [ vibeData %vibeData.1 90 16 24 ];
-[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 91 12 ]
-        symbol [ Attention %tmp.14 91 12 21 ];
-        %tmp.14 = getm $.Toybox.Attention;
-        symbol [ vibrate %tmp.15 91 22 29 ];
-        %tmp.15 = getv function %tmp.14 :vibrate;
-        %tmp.16 = lgetv %vibeData.1;
-        symbol [ vibeData %tmp.16 91 30 38 ];
-        invoke %tmp.14 %tmp.15(%tmp.16);
-_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_89_36_92_8_stop:
-        goto @_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_89_8_92_8_if_end;
-_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_89_8_92_8_if_end:
-_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_88_23_93_4_stop:
+        bf %tmp.4 @_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_178_8_180_8_if_end;
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_178_8_180_8_if_true:
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_178_36_180_8_start:
+[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 179 12 ]
+        symbol [ Attention %tmp.5 179 12 21 ];
+        %tmp.5 = getm $.Toybox.Attention;
+        symbol [ vibrate %tmp.6 179 22 29 ];
+        %tmp.6 = getv function %tmp.5 :vibrate;
+        %tmp.7 = newa 1;
+        symbol [ Attention %tmp.10 179 36 45 ];
+        %tmp.10 = getm $.Toybox.Attention;
+        symbol [ VibeProfile %tmp.11 179 46 57 ];
+        %tmp.11 = getv function ? %tmp.10 :VibeProfile;
+        %tmp.12 = 100;
+        %tmp.13 = 2000;
+        %tmp.8 = newc %tmp.11 (%tmp.12, %tmp.13);
+        %tmp.14 = dup %tmp.7;
+        %tmp.15 = aputv %tmp.14 0 %tmp.8;
+        invoke %tmp.5 %tmp.6(%tmp.15);
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_178_36_180_8_stop:
+        goto @_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_178_8_180_8_if_end;
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_178_8_180_8_if_end:
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_177_27_181_4_stop:
     }
-    [ @file = "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc"; @line = 96; @symbol_functiondef = [vibrateShort,96,13,25]; ]
+    [ @file = "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc"; @line = 183; @symbol_functiondef = [vibrateShort,183,13,25]; ]
     function vibrateShort() {
-_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_96_28_101_4_start:
-[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 97 8 ]
-_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_97_8_100_8_if_stmt:
-        symbol [ Attention %tmp.1 97 12 21 ];
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_183_28_187_4_start:
+[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 184 8 ]
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_184_8_186_8_if_stmt:
+        symbol [ Attention %tmp.1 184 12 21 ];
         %tmp.1 = getm $.Toybox.Attention;
         %tmp.3 = const :vibrate;
-        symbol [ vibrate %tmp.3 97 27 34 const ];
+        symbol [ vibrate %tmp.3 184 27 34 const ];
         %tmp.4 = canhazplz %tmp.1 %tmp.3;
-        bf %tmp.4 @_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_97_8_100_8_if_end;
-_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_97_8_100_8_if_true:
-_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_97_36_100_8_start:
-[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 98 12 ]
-        [ "_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_97_36_100_8_start" "_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_97_36_100_8_stop" ]
-        %vibeData.1 = local;
-        symbol [ vibeData %vibeData.1 98 16 24 ];
-        %tmp.5 = newa 1;
-        symbol [ Attention %tmp.8 98 33 42 ];
-        %tmp.8 = getm $.Toybox.Attention;
-        symbol [ VibeProfile %tmp.9 98 43 54 ];
-        %tmp.9 = getv function ? %tmp.8 :VibeProfile;
-        %tmp.10 = 50;
-        %tmp.11 = 100;
-        %tmp.6 = newc %tmp.9 (%tmp.10, %tmp.11);
-        %tmp.12 = dup %tmp.5;
-        %tmp.13 = aputv %tmp.12 0 %tmp.6;
-        lputv %vibeData.1 %tmp.13;
-        symbol [ vibeData %vibeData.1 98 16 24 ];
-[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 99 12 ]
-        symbol [ Attention %tmp.14 99 12 21 ];
-        %tmp.14 = getm $.Toybox.Attention;
-        symbol [ vibrate %tmp.15 99 22 29 ];
-        %tmp.15 = getv function %tmp.14 :vibrate;
-        %tmp.16 = lgetv %vibeData.1;
-        symbol [ vibeData %tmp.16 99 30 38 ];
-        invoke %tmp.14 %tmp.15(%tmp.16);
-_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_97_36_100_8_stop:
-        goto @_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_97_8_100_8_if_end;
-_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_97_8_100_8_if_end:
-_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_96_28_101_4_stop:
+        bf %tmp.4 @_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_184_8_186_8_if_end;
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_184_8_186_8_if_true:
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_184_36_186_8_start:
+[ "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" 185 12 ]
+        symbol [ Attention %tmp.5 185 12 21 ];
+        %tmp.5 = getm $.Toybox.Attention;
+        symbol [ vibrate %tmp.6 185 22 29 ];
+        %tmp.6 = getv function %tmp.5 :vibrate;
+        %tmp.7 = newa 1;
+        symbol [ Attention %tmp.10 185 36 45 ];
+        %tmp.10 = getm $.Toybox.Attention;
+        symbol [ VibeProfile %tmp.11 185 46 57 ];
+        %tmp.11 = getv function ? %tmp.10 :VibeProfile;
+        %tmp.12 = 50;
+        %tmp.13 = 200;
+        %tmp.8 = newc %tmp.11 (%tmp.12, %tmp.13);
+        %tmp.14 = dup %tmp.7;
+        %tmp.15 = aputv %tmp.14 0 %tmp.8;
+        invoke %tmp.5 %tmp.6(%tmp.15);
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_184_36_186_8_stop:
+        goto @_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_184_8_186_8_if_end;
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_184_8_186_8_if_end:
+_Users_rvsl_My_Drive__sargezaitsev_gmail_com__2___рабочее_33___BurgerKing_garmin_SaunaTracker_source_SaunaDelegate_mc_183_28_187_4_stop:
     }
 }
 [ @file = "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc"; @line = 1; ]

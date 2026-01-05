@@ -1,127 +1,107 @@
-# 🏃 SaunaTracker - Приложение для часов Garmin
+# 🧖 SaunaTracker
 
-Приложение для отслеживания сессий в сауне с таймером, мониторингом пульса и температуры.
+A minimalist sauna session tracker app for Garmin watches with real-time heart rate monitoring, temperature tracking, and multi-round session support.
 
-## ✅ Статус установки
+![SaunaTracker App](screenshot.png)
 
-- ✅ Java (OpenJDK 17) установлена
-- ✅ Connect IQ SDK настроен
-- ✅ Developer Key создан
-- ✅ Проект успешно скомпилирован
-- ✅ Симулятор готов к работе
+## ✨ Features
 
-## 🚀 Быстрый старт
+- **⏱️ Countdown Timer** - Customizable session duration (default 15 minutes)
+- **❤️ Heart Rate Monitoring** - Real-time display in MZ (max zone) circle
+- **🌡️ Temperature Tracking** - Ambient temperature from device sensor
+- **🔄 Multi-Round Support** - Track multiple sauna rounds with rest periods
+- **💾 FIT Activity Recording** - Saves sessions to Garmin Connect
+- **🌫️ Atmospheric Steam Effect** - Visual sauna atmosphere on left side
+- **🎨 Custom Typography** - Bold hours, outlined minutes for better readability
 
-### Запуск симулятора (РЕКОМЕНДУЕТСЯ)
+## 📱 Display Elements
+
+- **Top Right Circle**: Live heart rate (MZ indicator with progress ring during sauna)
+- **Top Left**: Current time with custom styling (bold hours, outlined minutes)
+- **Center**: Large countdown timer (shows overtime with + prefix)
+- **Middle**: Round number (SAUNA) or rest status (REST)
+- **Bottom**: Temperature and total session duration
+- **Left Side**: Decorative steam effect (active during sauna rounds only)
+
+## 🎮 Controls
+
+### Before Session Starts:
+- **UP (top left)**: Increase duration by 1 minute
+- **DOWN (bottom left)**: Decrease duration by 1 minute
+- **SELECT/GPS (top right)**: Start session
+
+### During Session:
+- **SELECT/GPS (top right)**: 
+  - In sauna → Switch to rest mode
+  - In rest → Start next sauna round
+- **DOWN (bottom left)**: 
+  - **Round 1 only** → Cancel workout ("cncl" button)
+  - Round 2+ → Inactive
+- **BACK (bottom right)**: Save session and exit ("save" button)
+
+## 🔧 Installation
+
+1. Download the `.prg` file from releases
+2. Connect your Garmin watch to computer
+3. Copy the file to `GARMIN/Apps/` folder
+4. Safely eject watch
+5. Find "SaunaTracker" in your apps
+
+## 📊 Session Flow
+
+```
+Setup → Round 1 (Sauna) → Rest → Round 2 (Sauna) → Rest → ... → Save
+```
+
+- Each sauna round counts down from configured duration
+- Overtime tracking with visual indicators
+- Rest periods count up from 0
+- Temperature and heart rate tracked throughout
+
+## 🌡️ Temperature Sensor
+
+The app uses your device's built-in temperature sensor via `SensorHistory` API. Temperature displays as "--" if:
+- Sensor is warming up
+- Watch not worn properly
+- No temperature data available
+
+## ⚙️ Technical Details
+
+- **Language**: Monkey C
+- **SDK**: Connect IQ 8.4.0+
+- **API Level**: 3.4.0+
+- **Activity Type**: Training/Strength Training
+- **Data Fields**: Heart Rate, Temperature, Duration
+
+## 🎯 Compatibility
+
+- ✅ Garmin Instinct 2S
+- ✅ Garmin Instinct 2S Solar Surf
+- ✅ Other devices with 156x156 MIP display (should work)
+
+## 🏗️ Building from Source
+
 ```bash
-cd "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker"
-./run_simulator_gui.sh
+# Compile
+monkeyc -o bin/SaunaTracker.prg \
+        -f monkey.jungle \
+        -y developer_key.der \
+        -d instinct2s \
+        -w
+
+# Run in simulator
+connectiq &
+monkeydo bin/SaunaTracker.prg instinct2s
 ```
 
-После запуска скрипта:
-1. **Откроется окно симулятора** Connect IQ
-2. **Выберите устройство** `Instinct 2S` в выпадающем списке
-3. **Дождитесь загрузки** приложения (появится интерфейс на экране часов)
-4. Если экран серый → в меню выберите `Simulation → Start Simulation`
+## 📝 License
 
-### Отладочный запуск (если есть проблемы)
-```bash
-./debug_run.sh
-```
+This project is open source and available for personal use.
 
-### Через VS Code
-1. Откройте проект в VS Code
-2. Нажмите `Cmd+Shift+P`
-3. Выберите `Monkey C: Run`
-4. Выберите устройство `instinct2s`
+## 🙏 Credits
 
-📖 **Подробная инструкция**: см. [SIMULATOR_GUIDE.md](SIMULATOR_GUIDE.md)
+Developed for optimal sauna training tracking with focus on simplicity and readability.
 
-## 📱 Функциональность
+---
 
-- **Таймер обратного отсчета**: 15 минут на каждый заход
-- **Мониторинг пульса**: в реальном времени
-- **Температура тела**: отображение текущей температуры
-- **Отслеживание раундов**: количество заходов в сауну
-- **FIT активность**: сохранение тренировки в Garmin Connect
-- **Вибрация**: оповещение по окончании таймера
-
-## 🎮 Управление
-
-- **START (верхняя правая кнопка)**: 
-  - Первое нажатие: начать сессию
-  - В сауне: выйти на перерыв
-  - На перерыве: вернуться в сауну
-  
-- **BACK (нижняя правая кнопка)**: 
-  - Завершить и сохранить сессию
-
-## 🛠️ Разработка
-
-### Компиляция
-```bash
-export JAVA_HOME="/opt/homebrew/opt/openjdk@17"
-export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
-"/Users/rvsl/Library/Application Support/Garmin/ConnectIQ/Sdks/connectiq-sdk-mac-8.4.0-2025-12-03-5122605dc/bin/monkeyc" \
-  -o bin/SaunaTracker.prg \
-  -f monkey.jungle \
-  -y "/Users/rvsl/Library/Application Support/Garmin/ConnectIQ/Devices/developer_key.der" \
-  -d instinct2s \
-  -w
-```
-
-### Запуск в симуляторе
-```bash
-# Запустить симулятор
-"/Users/rvsl/Library/Application Support/Garmin/ConnectIQ/Sdks/connectiq-sdk-mac-8.4.0-2025-12-03-5122605dc/bin/connectiq" &
-
-# Запустить приложение
-"/Users/rvsl/Library/Application Support/Garmin/ConnectIQ/Sdks/connectiq-sdk-mac-8.4.0-2025-12-03-5122605dc/bin/monkeydo" \
-  bin/SaunaTracker.prg instinct2s
-```
-
-## 📁 Структура проекта
-
-```
-SaunaTracker/
-├── source/
-│   ├── SaunaApp.mc           # Главный класс приложения
-│   ├── SaunaView.mc          # Отображение UI
-│   └── SaunaDelegate.mc      # Обработка кнопок и логика
-├── resources/                 # Ресурсы (иконки, строки)
-├── bin/                      # Скомпилированные файлы
-├── manifest.xml              # Манифест приложения
-├── monkey.jungle             # Конфигурация сборки
-├── run_simulator.sh          # Скрипт запуска
-├── SETUP.md                  # Детальная инструкция по настройке
-└── README.md                 # Этот файл
-```
-
-## 🔧 Устройства
-
-Приложение настроено для:
-- **Garmin Instinct 2S**
-
-Для добавления других устройств используйте в VS Code:
-`Cmd+Shift+P` → `Monkey C: Edit Products`
-
-## 📝 Разрешения
-
-- **Fit**: запись активности
-- **FitContributor**: расширенные данные FIT
-- **Positioning**: GPS (опционально)
-- **Sensor**: датчики (пульс, температура)
-- **SensorHistory**: история показаний датчиков
-
-## 🐛 Отладка
-
-Если симулятор не запускается:
-1. Проверьте Java: `java -version`
-2. Перезапустите VS Code
-3. Проверьте пути в `.vscode/settings.json`
-
-Подробнее смотрите в [SETUP.md](SETUP.md)
-
-## 📄 Лицензия
-
-Приложение создано для личного использования.
+**Enjoy your sauna sessions! 🧖‍♂️🔥**
