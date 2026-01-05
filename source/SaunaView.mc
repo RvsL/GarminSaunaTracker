@@ -124,6 +124,33 @@ class SaunaView extends WatchUi.View {
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_TRANSPARENT);
         dc.drawText(minX, timeY, timeFont, minStr, Graphics.TEXT_JUSTIFY_LEFT);
 
+        
+        // --- 5.5. ПАР/ДЫМ (Слева, декоративный эффект) ---
+        // Рисуем пар только во время сауны
+        if (mDataParams.isSessionActive && mDataParams.isSaunaMode) {
+            dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
+            dc.setPenWidth(1);
+            
+            // Создаем волнистые облачка пара, поднимающиеся снизу вверх
+            // Используем totalDuration для анимации (медленное движение)
+            var steamOffset = (mDataParams.totalDuration % 6) * 2;
+            
+            // Нижнее облачко пара (самое плотное)
+            dc.fillCircle(8, 95 - steamOffset, 4);
+            dc.fillCircle(12, 93 - steamOffset, 3);
+            dc.fillCircle(6, 90 - steamOffset, 3);
+            
+            // Среднее облачко (немного выше и прозрачнее)
+            dc.drawCircle(10, 78 - steamOffset, 5);
+            dc.drawCircle(14, 75 - steamOffset, 4);
+            dc.drawCircle(7, 74 - steamOffset, 3);
+            
+            // Верхнее облачко (самое рассеянное)
+            dc.drawCircle(9, 62 - steamOffset, 3);
+            dc.drawCircle(12, 60 - steamOffset, 2);
+            dc.drawCircle(6, 59 - steamOffset, 2);
+        }
+
 
         // --- 6. ТАЙМЕР (Центр) ---
         // Сбрасываем цвет на БЕЛЫЙ после черных минут
