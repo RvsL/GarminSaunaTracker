@@ -15,62 +15,58 @@ class SaunaDelegate extends WatchUi.BehaviorDelegate {
         BehaviorDelegate.initialize();
         mData = data;
         
-        // Таймер тикает раз в секунду
         timer = new Timer.Timer();
         timer.start(method(:onTimerTick), 1000, true);
     }
 
     function onTimerTick() as Void {
-        // Если сессия запущена - считаем время
         if (session != null && session.isRecording()) {
             mData.totalDuration++;
             
-            // Логика обратного отсчета
-            if (mData.timeLeft > 0) {
-                mData.timeLeft--;
-            } else if (mData.timeLeft == 0) {
-                vibrateLong(); // 00:00 - вибрируем
-                mData.timeLeft = -1; 
+            if (mData.isSaunaMode) {
+                // --- РЕЖИМ САУНЫ ---
+                // Таймер идет вниз
+                if (mData.timeLeft > 0) {
+                    mData.timeLeft--;
+                    // Если вдруг пришло к нулю именно сейчас
+                    if (mData.timeLeft == 0) {
+                        vibrateLong(); // БЗЗЗЗЗ! Время вышло
+                    }
+                } else {
+                    // Если уже 0 или меньше (пересиживаем)
+                    // Уменьшаем дальше в минус (будет -1, -2...),
+                    // во View мы покажем это как положительное время пересиживания.
+                    mData.timeLeft--; 
+                }
             } else {
-                mData.timeLeft--; // Уходим в минус (показываем пересиживание)
+                // --- РЕЖИМ ОТДЫХА ---
+                // Таймер идет вверх
+                mData.timeLeft++;
             }
         }
-        
         WatchUi.requestUpdate();
     }
 
-    // --- КНОПКА GPS (СТАРТ / СЛЕДУЮЩИЙ РАУНД) ---
+    // --- КНОПКА GPS (СТАРТ / СМЕНА РЕЖИМА) ---
     function onSelect() as Boolean {
         if (session == null) {
-            // 1. САМЫЙ ПЕРВЫЙ СТАРТ
-            try {
-                session = ActivityRecording.createSession({
-                    :name => "Sauna",
-                    :sport => ActivityRecording.SPORT_GENERIC,
-                    :subSport => ActivityRecording.SUB_SPORT_GENERIC
-                });
-                session.start();
-            } catch(e) {
-                System.println("Session error");
-            }
-            
+            // ПЕРВЫЙ СТАРТ
+            createSession();
             mData.isSessionActive = true;
-            mData.isSaunaMode = true; // Сразу попадаем в сауну
+            mData.isSaunaMode = true; 
             mData.timeLeft = mData.durationConfig; 
             mData.round = 1;
-            
             vibrateShort();
         } 
         else {
-            // СЕССИЯ УЖЕ ИДЕТ - ПЕРЕКЛЮЧАЕМ РЕЖИМЫ
             if (mData.isSaunaMode) {
-                // Был в Сауне -> Иду на ОТДЫХ
+                // Идем на ОТДЫХ
                 mData.isSaunaMode = false;
-                mData.timeLeft = 0; // Таймер отдыха считаем в «минус» (как секундомер)
+                mData.timeLeft = 0; // Начинаем отдых с 0
             } else {
-                // Был на Отдыхе -> Иду в САУНУ
+                // Идем в САУНУ
                 mData.isSaunaMode = true;
-                mData.timeLeft = mData.durationConfig; // Сброс таймера на выбранное время
+                mData.timeLeft = mData.durationConfig; // Сброс на 15 мин (например)
                 mData.round++;
             }
             vibrateShort();
@@ -78,20 +74,14 @@ class SaunaDelegate extends WatchUi.BehaviorDelegate {
         return true;
     }
 
-    // --- НАСТРОЙКА ВРЕМЕНИ (Если сессия не идет) ---
-    // Кнопка MENU/UP
-    function onPreviousPage() as Boolean {
-        return adjustTime(60); // +1 минута
-    }
-    // Кнопка ABC/DOWN
-    function onNextPage() as Boolean {
-        return adjustTime(-60); // -1 минута
-    }
+    // --- НАСТРОЙКА ВРЕМЕНИ (ДО СТАРТА) ---
+    function onPreviousPage() as Boolean { return adjustTime(60); }
+    function onNextPage() as Boolean { return adjustTime(-60); }
     
     function adjustTime(seconds) as Boolean {
-        if (session == null) { // Менять можно только до старта
+        if (session == null) {
             mData.durationConfig += seconds;
-            if (mData.durationConfig < 60) { mData.durationConfig = 60; } // Минимум 1 мин
+            if (mData.durationConfig < 60) { mData.durationConfig = 60; }
             mData.timeLeft = mData.durationConfig;
             WatchUi.requestUpdate();
             return true;
@@ -99,15 +89,29 @@ class SaunaDelegate extends WatchUi.BehaviorDelegate {
         return false;
     }
 
-    // --- КНОПКА BACK (ВЫХОД) ---
+    // --- КНОПКА BACK (СОХРАНИТЬ И ВЫЙТИ) ---
     function onBack() as Boolean {
+        // Если сессия идет, завершаем её
         if (session != null) {
             session.stop();
             session.save();
-            session = null;
         }
+        // Закрываем приложение
         System.exit();
         return true;
+    }
+    
+    function createSession() {
+        try {
+            session = ActivityRecording.createSession({
+                :name => "Sauna",
+                :sport => ActivityRecording.SPORT_GENERIC,
+                :subSport => ActivityRecording.SUB_SPORT_GENERIC
+            });
+            session.start();
+        } catch(e) {
+            System.println("Session Error");
+        }
     }
     
     function vibrateLong() {
