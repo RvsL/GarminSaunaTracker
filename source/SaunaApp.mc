@@ -4,14 +4,18 @@ import Toybox.WatchUi;
 import Toybox.Sensor;
 import Toybox.System;
 
-// Глобальный класс данных для обмена между View и Delegate
+// Глобальный класс данных
 class SaunaData {
     public var heartRate = 0;
     public var temperature = 0.0f;
-    public var timeLeft = 900; // 15 минут в секундах
+    
+    public var durationConfig = 900; // Настройка (по умолчанию 15 мин)
+    public var timeLeft = 900;       // Текущий счетчик
+    
     public var totalDuration = 0;
     public var round = 0;
-    public var isSaunaMode = false;
+    public var isSaunaMode = true;   // true = Сауна, false = Отдых
+    public var isSessionActive = false; // Запущена ли таймером активность
 }
 
 class SaunaApp extends Application.AppBase {
@@ -22,14 +26,12 @@ class SaunaApp extends Application.AppBase {
         AppBase.initialize();
     }
 
-    // При запуске приложения
     function onStart(state as Dictionary?) as Void {
-        // Включаем HR и Температуру
         try {
            Sensor.setEnabledSensors([Sensor.SENSOR_HEARTRATE, Sensor.SENSOR_TEMPERATURE]);
            Sensor.enableSensorEvents(method(:onSensor));
         } catch(e) {
-           System.println("Sensor Setup Error: " + e.getErrorMessage());
+           System.println("Err: " + e.getErrorMessage());
         }
     }
 
@@ -37,18 +39,12 @@ class SaunaApp extends Application.AppBase {
         Sensor.setEnabledSensors([]);
     }
 
-    // Здесь мы возвращаем наш View и Delegate
     function getInitialView() as [Views] or [Views, InputDelegates] {
         return [ new SaunaView(mData), new SaunaDelegate(mData) ];
     }
 
-    // Обработчик данных с сенсоров
     function onSensor(sensorInfo as Sensor.Info) as Void {
-        if (sensorInfo.heartRate != null) {
-            mData.heartRate = sensorInfo.heartRate;
-        }
-        if (sensorInfo.temperature != null) {
-            mData.temperature = sensorInfo.temperature;
-        }
+        if (sensorInfo.heartRate != null) { mData.heartRate = sensorInfo.heartRate; }
+        if (sensorInfo.temperature != null) { mData.temperature = sensorInfo.temperature; }
     }
 }
