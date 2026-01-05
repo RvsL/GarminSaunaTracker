@@ -76,7 +76,36 @@ class SaunaDelegate extends WatchUi.BehaviorDelegate {
 
     // --- НАСТРОЙКА ВРЕМЕНИ (ДО СТАРТА) ---
     function onPreviousPage() as Boolean { return adjustTime(60); }
-    function onNextPage() as Boolean { return adjustTime(-60); }
+    
+    function onNextPage() as Boolean {
+        // DOWN button: Discard в Round 1, иначе настройка времени
+        if (mData.isSessionActive && mData.round == 1) {
+            System.println("DOWN button pressed - discarding session in Round 1");
+            
+            // Останавливаем сессию БЕЗ сохранения
+            if (session != null) {
+                session.stop();
+                session.discard();
+                System.println("Session discarded");
+            }
+            
+            // Сбрасываем состояние
+            session = null;
+            mData.isSessionActive = false;
+            mData.isSaunaMode = true;
+            mData.round = 0;
+            mData.totalDuration = 0;
+            mData.timeLeft = mData.durationConfig;
+            
+            // Закрываем приложение
+            System.println("Exiting app...");
+            System.exit();
+            return true;
+        }
+        
+        // Если сессия не активна, настраиваем время
+        return adjustTime(-60);
+    }
     
     function adjustTime(seconds) as Boolean {
         if (session == null) {
@@ -89,6 +118,37 @@ class SaunaDelegate extends WatchUi.BehaviorDelegate {
         return false;
     }
 
+    // --- КНОПКА ABC (DISCARD - ТОЛЬКО В ПЕРВОМ РАУНДЕ) ---
+    function onMenu() as Boolean {
+        System.println("ABC button pressed! Active: " + mData.isSessionActive + ", Round: " + mData.round);
+        
+        // Работает только в первом раунде сауны
+        if (mData.isSessionActive && mData.round == 1) {
+            System.println("Discarding session...");
+            
+            // Останавливаем сессию БЕЗ сохранения
+            if (session != null) {
+                session.stop();
+                session.discard();
+                System.println("Session discarded");
+            }
+            // Сбрасываем состояние
+            session = null;
+            mData.isSessionActive = false;
+            mData.isSaunaMode = true;
+            mData.round = 0;
+            mData.totalDuration = 0;
+            mData.timeLeft = mData.durationConfig;
+            
+            // Закрываем приложение
+            System.println("Exiting app...");
+            System.exit();
+            return true; // Handled the event
+        }
+        System.println("ABC button ignored (not in round 1)");
+        return false; // Not handled (not in round 1)
+    }
+    
     // --- КНОПКА BACK (СОХРАНИТЬ И ВЫЙТИ) ---
     function onBack() as Boolean {
         // Если сессия идет, завершаем её
@@ -98,15 +158,15 @@ class SaunaDelegate extends WatchUi.BehaviorDelegate {
         }
         // Закрываем приложение
         System.exit();
-        return true;
+        // Удалён unreachable return true
     }
     
     function createSession() {
         try {
             session = ActivityRecording.createSession({
                 :name => "Sauna",
-                :sport => ActivityRecording.SPORT_GENERIC,
-                :subSport => ActivityRecording.SUB_SPORT_GENERIC
+                :sport => ActivityRecording.SPORT_TRAINING,
+                :subSport => ActivityRecording.SUB_SPORT_STRENGTH_TRAINING
             });
             session.start();
         } catch(e) {
