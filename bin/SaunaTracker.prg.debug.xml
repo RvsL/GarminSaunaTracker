@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<debugInfo>
+    <manifest filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/manifest.xml"/>
+    <pcToLineNum>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaView.mc" id="1" lineNum="7" parent="globals/SaunaView" pc="268435460" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" id="2" lineNum="7" parent="globals/SaunaDelegate" pc="268435479" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/bin/gen/006-B3889-00/source/Rez.mcgen" id="3" lineNum="7" parent="globals/Rez" pc="268435498" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaApp.mc" id="4" lineNum="17" parent="globals/SaunaApp" pc="268435522" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaApp.mc" id="4" lineNum="19" parent="globals/SaunaApp" pc="268435540" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaView.mc" id="5" lineNum="11" parent="globals/SaunaView" pc="268435571" symbol="initialize"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaView.mc" id="5" lineNum="12" parent="globals/SaunaView" pc="268435573" symbol="initialize"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaView.mc" id="5" lineNum="13" parent="globals/SaunaView" pc="268435591" symbol="initialize"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaView.mc" id="6" lineNum="17" parent="globals/SaunaView" pc="268435602" symbol="onUpdate"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaView.mc" id="6" lineNum="19" parent="globals/SaunaView" pc="268435606" symbol="onUpdate"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaView.mc" id="6" lineNum="20" parent="globals/SaunaView" pc="268435628" symbol="onUpdate"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaView.mc" id="6" lineNum="21" parent="globals/SaunaView" pc="268435640" symbol="onUpdate"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaView.mc" id="6" lineNum="23" parent="globals/SaunaView" pc="268435662" symbol="onUpdate"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaView.mc" id="6" lineNum="24" parent="globals/SaunaView" pc="268435675" symbol="onUpdate"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaView.mc" id="6" lineNum="27" parent="globals/SaunaView" pc="268435688" symbol="onUpdate"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaView.mc" id="6" lineNum="28" parent="globals/SaunaView" pc="268435725" symbol="onUpdate"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaView.mc" id="6" lineNum="29" parent="globals/SaunaView" pc="268435799" symbol="onUpdate"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaView.mc" id="6" lineNum="32" parent="globals/SaunaView" pc="268435836" symbol="onUpdate"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaView.mc" id="6" lineNum="33" parent="globals/SaunaView" pc="268435858" symbol="onUpdate"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaView.mc" id="6" lineNum="34" parent="globals/SaunaView" pc="268435880" symbol="onUpdate"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaView.mc" id="6" lineNum="37" parent="globals/SaunaView" pc="268435942" symbol="onUpdate"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaView.mc" id="6" lineNum="40" parent="globals/SaunaView" pc="268435988" symbol="onUpdate"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaView.mc" id="6" lineNum="41" parent="globals/SaunaView" pc="268436031" symbol="onUpdate"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaView.mc" id="6" lineNum="43" parent="globals/SaunaView" pc="268436055" symbol="onUpdate"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaView.mc" id="6" lineNum="44" parent="globals/SaunaView" pc="268436077" symbol="onUpdate"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaView.mc" id="6" lineNum="46" parent="globals/SaunaView" pc="268436096" symbol="onUpdate"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaView.mc" id="6" lineNum="50" parent="globals/SaunaView" pc="268436136" symbol="onUpdate"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaView.mc" id="6" lineNum="51" parent="globals/SaunaView" pc="268436188" symbol="onUpdate"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaView.mc" id="6" lineNum="54" parent="globals/SaunaView" pc="268436225" symbol="onUpdate"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaView.mc" id="6" lineNum="55" parent="globals/SaunaView" pc="268436272" symbol="onUpdate"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" id="7" lineNum="77" parent="globals/SaunaDelegate" pc="268436319" symbol="onBack"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" id="7" lineNum="78" parent="globals/SaunaDelegate" pc="268436321" symbol="onBack"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" id="7" lineNum="79" parent="globals/SaunaDelegate" pc="268436334" symbol="onBack"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" id="7" lineNum="80" parent="globals/SaunaDelegate" pc="268436352" symbol="onBack"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" id="7" lineNum="81" parent="globals/SaunaDelegate" pc="268436370" symbol="onBack"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" id="7" lineNum="83" parent="globals/SaunaDelegate" pc="268436382" symbol="onBack"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" id="7" lineNum="84" parent="globals/SaunaDelegate" pc="268436398" symbol="onBack"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" id="8" lineNum="70" parent="globals/SaunaDelegate" pc="268436401" symbol="startSaunaRound"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" id="8" lineNum="71" parent="globals/SaunaDelegate" pc="268436403" symbol="startSaunaRound"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" id="8" lineNum="72" parent="globals/SaunaDelegate" pc="268436419" symbol="startSaunaRound"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" id="8" lineNum="73" parent="globals/SaunaDelegate" pc="268436438" symbol="startSaunaRound"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" id="9" lineNum="25" parent="globals/SaunaDelegate" pc="268436464" symbol="onTimerTick"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" id="9" lineNum="27" parent="globals/SaunaDelegate" pc="268436466" symbol="onTimerTick"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" id="9" lineNum="28" parent="globals/SaunaDelegate" pc="268436499" symbol="onTimerTick"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" id="9" lineNum="31" parent="globals/SaunaDelegate" pc="268436524" symbol="onTimerTick"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" id="9" lineNum="32" parent="globals/SaunaDelegate" pc="268436547" symbol="onTimerTick"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" id="9" lineNum="33" parent="globals/SaunaDelegate" pc="268436575" symbol="onTimerTick"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" id="9" lineNum="35" parent="globals/SaunaDelegate" pc="268436598" symbol="onTimerTick"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" id="9" lineNum="36" parent="globals/SaunaDelegate" pc="268436610" symbol="onTimerTick"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" id="9" lineNum="40" parent="globals/SaunaDelegate" pc="268436635" symbol="onTimerTick"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" id="10" lineNum="88" parent="globals/SaunaDelegate" pc="268436652" symbol="vibrate"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" id="10" lineNum="89" parent="globals/SaunaDelegate" pc="268436656" symbol="vibrate"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" id="10" lineNum="90" parent="globals/SaunaDelegate" pc="268436671" symbol="vibrate"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" id="10" lineNum="91" parent="globals/SaunaDelegate" pc="268436723" symbol="vibrate"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" id="11" lineNum="96" parent="globals/SaunaDelegate" pc="268436745" symbol="vibrateShort"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" id="11" lineNum="97" parent="globals/SaunaDelegate" pc="268436749" symbol="vibrateShort"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" id="11" lineNum="98" parent="globals/SaunaDelegate" pc="268436764" symbol="vibrateShort"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" id="11" lineNum="99" parent="globals/SaunaDelegate" pc="268436816" symbol="vibrateShort"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" id="12" lineNum="16" parent="globals/SaunaDelegate" pc="268436838" symbol="initialize"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" id="12" lineNum="17" parent="globals/SaunaDelegate" pc="268436840" symbol="initialize"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" id="12" lineNum="18" parent="globals/SaunaDelegate" pc="268436858" symbol="initialize"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" id="12" lineNum="21" parent="globals/SaunaDelegate" pc="268436868" symbol="initialize"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" id="12" lineNum="22" parent="globals/SaunaDelegate" pc="268436902" symbol="initialize"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" id="13" lineNum="44" parent="globals/SaunaDelegate" pc="268436944" symbol="onSelect"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" id="13" lineNum="45" parent="globals/SaunaDelegate" pc="268436946" symbol="onSelect"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" id="13" lineNum="47" parent="globals/SaunaDelegate" pc="268436958" symbol="onSelect"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" id="13" lineNum="52" parent="globals/SaunaDelegate" pc="268437026" symbol="onSelect"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" id="13" lineNum="53" parent="globals/SaunaDelegate" pc="268437044" symbol="onSelect"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" id="13" lineNum="54" parent="globals/SaunaDelegate" pc="268437056" symbol="onSelect"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" id="13" lineNum="56" parent="globals/SaunaDelegate" pc="268437071" symbol="onSelect"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" id="13" lineNum="58" parent="globals/SaunaDelegate" pc="268437088" symbol="onSelect"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" id="13" lineNum="59" parent="globals/SaunaDelegate" pc="268437104" symbol="onSelect"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" id="13" lineNum="60" parent="globals/SaunaDelegate" pc="268437123" symbol="onSelect"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" id="13" lineNum="64" parent="globals/SaunaDelegate" pc="268437138" symbol="onSelect"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" id="13" lineNum="65" parent="globals/SaunaDelegate" pc="268437150" symbol="onSelect"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaDelegate.mc" id="13" lineNum="67" parent="globals/SaunaDelegate" pc="268437162" symbol="onSelect"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaApp.mc" id="15" lineNum="26" parent="globals/SaunaApp" pc="268437165" symbol="onStart"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaApp.mc" id="15" lineNum="29" parent="globals/SaunaApp" pc="268437169" symbol="onStart"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaApp.mc" id="15" lineNum="30" parent="globals/SaunaApp" pc="268437217" symbol="onStart"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaApp.mc" id="15" lineNum="31" parent="globals/SaunaApp" pc="268437255" symbol="onStart"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaApp.mc" id="15" lineNum="32" parent="globals/SaunaApp" pc="268437259" symbol="onStart"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaApp.mc" id="16" lineNum="41" parent="globals/SaunaApp" pc="268437305" symbol="getInitialView"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaApp.mc" id="16" lineNum="42" parent="globals/SaunaApp" pc="268437307" symbol="getInitialView"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaApp.mc" id="17" lineNum="21" parent="globals/SaunaApp" pc="268437390" symbol="initialize"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaApp.mc" id="17" lineNum="22" parent="globals/SaunaApp" pc="268437392" symbol="initialize"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaApp.mc" id="18" lineNum="46" parent="globals/SaunaApp" pc="268437411" symbol="onSensor"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaApp.mc" id="18" lineNum="47" parent="globals/SaunaApp" pc="268437413" symbol="onSensor"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaApp.mc" id="18" lineNum="48" parent="globals/SaunaApp" pc="268437426" symbol="onSensor"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaApp.mc" id="18" lineNum="50" parent="globals/SaunaApp" pc="268437451" symbol="onSensor"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaApp.mc" id="18" lineNum="51" parent="globals/SaunaApp" pc="268437464" symbol="onSensor"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaApp.mc" id="19" lineNum="36" parent="globals/SaunaApp" pc="268437490" symbol="onStop"/>
+        <entry filename="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/source/SaunaApp.mc" id="19" lineNum="37" parent="globals/SaunaApp" pc="268437492" symbol="onStop"/>
+    </pcToLineNum>
+    <symbolTable>
+        <entry id="8388639" module="true" symbol="Graphics"/>
+        <entry id="8388632" method="true" symbol="&lt;init&gt;"/>
+        <entry id="8388638" module="true" symbol="ActivityRecording"/>
+        <entry id="10" method="true" symbol="onTimerTick"/>
+        <entry field="true" id="13" symbol="timer"/>
+        <entry field="true" id="8388890" symbol="sport"/>
+        <entry id="8" object="true" symbol="SaunaView"/>
+        <entry field="true" id="16" symbol="timeLeft"/>
+        <entry field="true" id="17" symbol="totalDuration"/>
+        <entry id="12" method="true" symbol="startSaunaRound"/>
+        <entry id="8388924" module="true" symbol="Gregorian"/>
+        <entry id="7" object="true" symbol="SaunaDelegate"/>
+        <entry field="true" id="8388611" module="true" symbol="Toybox"/>
+        <entry field="true" id="8388962" symbol="temperature"/>
+        <entry field="true" id="20" symbol="AppName"/>
+        <entry id="4" module="true" symbol="globals/Rez/Strings"/>
+        <entry field="true" id="15" symbol="isSaunaMode"/>
+        <entry id="8388648" module="true" symbol="WatchUi"/>
+        <entry id="8389081" method="true" symbol="onBack"/>
+        <entry id="2" module="true" symbol="globals/Rez"/>
+        <entry field="true" id="23" symbol="prompt"/>
+        <entry id="14" method="true" symbol="vibrateShort"/>
+        <entry id="8389124" method="true" symbol="onUpdate"/>
+        <entry field="true" id="8389719" method="true" symbol="round"/>
+        <entry id="8388771" module="true" object="true" symbol="Drawables"/>
+        <entry id="8388987" method="true" symbol="vibrate"/>
+        <entry id="3" module="true" symbol="globals/Rez/Drawables"/>
+        <entry field="true" id="9" symbol="mDataParams"/>
+        <entry id="6" object="true" symbol="SaunaData"/>
+        <entry id="8388644" module="true" symbol="System"/>
+        <entry id="8389619" method="true" symbol="onSelect"/>
+        <entry id="8388645" module="true" symbol="Time"/>
+        <entry id="8388769" module="true" object="true" symbol="Rez"/>
+        <entry id="5" object="true" symbol="SaunaApp"/>
+        <entry id="8388640" module="true" symbol="Lang"/>
+        <entry id="18" method="true" symbol="onSensor"/>
+        <entry field="true" id="8388887" symbol="mData"/>
+        <entry field="true" id="19" symbol="LauncherIcon"/>
+        <entry id="8388610" symbol="statics"/>
+        <entry id="8388643" module="true" symbol="Sensor"/>
+        <entry id="8389350" module="true" symbol="globals"/>
+        <entry id="8388770" module="true" object="true" symbol="Strings"/>
+        <entry field="true" id="8388960" symbol="heartRate"/>
+        <entry id="8388702" method="true" symbol="initialize"/>
+        <entry id="8389279" method="true" symbol="onStart"/>
+        <entry field="true" id="8388891" symbol="subSport"/>
+        <entry field="true" id="8388892" symbol="name"/>
+        <entry id="8389280" method="true" symbol="getInitialView"/>
+        <entry id="8389281" method="true" symbol="onStop"/>
+        <entry id="8388646" module="true" object="true" symbol="Timer"/>
+        <entry id="8388636" module="true" symbol="Attention"/>
+        <entry field="true" id="11" symbol="session"/>
+        <entry id="8388635" module="true" symbol="Application"/>
+        <entry field="true" id="22" symbol="menu_label_2"/>
+        <entry field="true" id="21" symbol="menu_label_1"/>
+    </symbolTable>
+    <localVars>
+        <entry arg="true" endPc="268435601" name="params" stackId="1" startPc="268435571"/>
+        <entry arg="true" endPc="268436318" name="dc" stackId="1" startPc="268435602"/>
+        <entry endPc="268436317" name="width" stackId="2" startPc="268435606"/>
+        <entry endPc="268436317" name="height" stackId="3" startPc="268435606"/>
+        <entry endPc="268436317" name="today" stackId="4" startPc="268435606"/>
+        <entry endPc="268436317" name="timeString" stackId="5" startPc="268435606"/>
+        <entry endPc="268436317" name="minutes" stackId="6" startPc="268435606"/>
+        <entry endPc="268436317" name="seconds" stackId="7" startPc="268435606"/>
+        <entry endPc="268436317" name="timerStr" stackId="8" startPc="268435606"/>
+        <entry endPc="268436317" name="tempVal" stackId="9" startPc="268435606"/>
+        <entry endPc="268436317" name="tempStr" stackId="10" startPc="268435606"/>
+        <entry endPc="268436317" name="totalMin" stackId="11" startPc="268435606"/>
+        <entry endPc="268436317" name="bottomStr" stackId="12" startPc="268435606"/>
+        <entry endPc="268436317" name="hrStr" stackId="13" startPc="268435606"/>
+        <entry endPc="268436317" name="statusStr" stackId="14" startPc="268435606"/>
+        <entry endPc="268436740" name="vibeData" stackId="1" startPc="268436671"/>
+        <entry endPc="268436833" name="vibeData" stackId="1" startPc="268436764"/>
+        <entry arg="true" endPc="268436943" name="data" stackId="1" startPc="268436838"/>
+        <entry arg="true" endPc="268437304" name="state" stackId="1" startPc="268437165"/>
+        <entry endPc="268437298" name="e" stackId="2" startPc="268437255"/>
+        <entry arg="true" endPc="268437489" name="sensorInfo" stackId="1" startPc="268437411"/>
+        <entry arg="true" endPc="268437514" name="state" stackId="1" startPc="268437490"/>
+    </localVars>
+    <deviceInfo deviceVersion="8fc30743a4191ec19bcafa28e3ffcc2b5a958a17" partNumber="006-B3889-00"/>
+    <annotations>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="LauncherIcon"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="menu_label_2"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="menu_label_1"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="prompt"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="AppName"/>
+    </annotations>
+    <dataEntryOffsetMappings>
+        <dataEntry label="globals" offset="55" parentId="" symbolId="globals" type="module"/>
+        <dataEntry label="globals/SaunaView" offset="134" parentId="globals" symbolId="SaunaView" type="class"/>
+        <dataEntry label="globals/SaunaDelegate" offset="197" parentId="globals" symbolId="SaunaDelegate" type="class"/>
+        <dataEntry label="globals/SaunaData" offset="316" parentId="globals" symbolId="SaunaData" type="class"/>
+        <dataEntry label="globals/Rez" offset="411" parentId="globals" symbolId="Rez" type="module"/>
+        <dataEntry label="globals/SaunaApp" offset="458" parentId="globals" symbolId="SaunaApp" type="class"/>
+        <dataEntry label="globals/Rez/Drawables" offset="545" parentId="Rez" symbolId="Drawables" type="module"/>
+        <dataEntry label="globals/Rez/Strings" offset="584" parentId="Rez" symbolId="Strings" type="module"/>
+    </dataEntryOffsetMappings>
+    <functions>
+        <functionEntry accessMode="public" endPc="268435478" name="&lt;init&gt;" parent="SaunaView" startPc="268435460">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435497" name="&lt;init&gt;" parent="SaunaDelegate" startPc="268435479">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="SaunaData">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435521" name="&lt;init&gt;" parent="Rez" startPc="268435498">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435570" name="&lt;init&gt;" parent="SaunaApp" startPc="268435522">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435601" name="initialize" parent="SaunaView" startPc="268435571">
+            <param id="params"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436318" name="onUpdate" parent="SaunaView" startPc="268435602">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436400" name="onBack" parent="SaunaDelegate" startPc="268436319">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436463" name="startSaunaRound" parent="SaunaDelegate" startPc="268436401">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436651" name="onTimerTick" parent="SaunaDelegate" startPc="268436464">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436744" name="vibrate" parent="SaunaDelegate" startPc="268436652">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436837" name="vibrateShort" parent="SaunaDelegate" startPc="268436745">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436943" name="initialize" parent="SaunaDelegate" startPc="268436838">
+            <param id="data"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437164" name="onSelect" parent="SaunaDelegate" startPc="268436944">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="initialize" parent="SaunaData">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Drawables">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Strings">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437304" name="onStart" parent="SaunaApp" startPc="268437165">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437389" name="getInitialView" parent="SaunaApp" startPc="268437305">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437410" name="initialize" parent="SaunaApp" startPc="268437390">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437489" name="onSensor" parent="SaunaApp" startPc="268437411">
+            <param id="sensorInfo"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437514" name="onStop" parent="SaunaApp" startPc="268437490">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+    </functions>
+</debugInfo>

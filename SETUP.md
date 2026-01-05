@@ -1,0 +1,98 @@
+# Настройка окружения для разработки Garmin SaunaTracker
+
+## ✅ Что уже сделано:
+
+1. **Java (OpenJDK 17)** установлена через Homebrew
+2. **Переменные окружения** добавлены в `~/.zshrc`:
+   - `JAVA_HOME=/opt/homebrew/opt/openjdk@17`
+   - `PATH` обновлен для доступа к Java
+3. **Проект SaunaTracker** создан в правильной директории
+4. **VS Code настройки** созданы в `.vscode/settings.json`
+
+## 🔧 Необходимо выполнить:
+
+### 1. Перезапустить VS Code
+Чтобы новые настройки Java вступили в силу:
+```bash
+# Закройте VS Code полностью и откройте заново
+# Или выполните команду:
+code "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker"
+```
+
+### 2. Добавить устройства в проект
+В VS Code выполните команду:
+- `Cmd+Shift+P` → `Monkey C: Edit Products`
+- Выберите устройства Garmin для которых разрабатываете (например, Fenix 7, Venu 2, и т.д.)
+
+### 3. Проверить сборку
+В VS Code:
+- `Cmd+Shift+P` → `Monkey C: Build for Device`
+- Выберите целевое устройство
+
+### 4. (Опционально) Создать системную ссылку на Java
+Если VS Code все еще не видит Java, выполните в терминале:
+```bash
+sudo ln -sfn /opt/homebrew/opt/openjdk@17/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-17.jdk
+```
+
+## 📁 Структура проекта:
+```
+SaunaTracker/
+├── .vscode/
+│   └── settings.json          # Настройки VS Code с путями к Java
+├── source/
+│   ├── SaunaTrackerApp.mc     # Главный класс приложения
+│   ├── SaunaTrackerView.mc    # Представление
+│   ├── SaunaTrackerDelegate.mc # Делегат ввода
+│   └── SaunaTrackerMenuDelegate.mc # Делегат меню
+├── resources/                  # Ресурсы (иконки, строки)
+├── manifest.xml               # Манифест приложения
+└── monkey.jungle              # Конфигурация сборки
+```
+
+## 🧪 Тестирование:
+
+### Вариант 1: Через скрипт (рекомендуется)
+```bash
+cd "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker"
+./run_simulator.sh
+```
+
+### Вариант 2: Через VS Code
+1. Используйте симулятор: `Cmd+Shift+P` → `Monkey C: Run`
+2. Выберите устройство для эмуляции
+
+### Вариант 3: Вручную
+```bash
+# 1. Скомпилировать
+cd "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker"
+export JAVA_HOME="/opt/homebrew/opt/openjdk@17"
+export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
+"/Users/rvsl/Library/Application Support/Garmin/ConnectIQ/Sdks/connectiq-sdk-mac-8.4.0-2025-12-03-5122605dc/bin/monkeyc" \
+  -o bin/SaunaTracker.prg \
+  -f monkey.jungle \
+  -y "/Users/rvsl/Library/Application Support/Garmin/ConnectIQ/Devices/developer_key.der" \
+  -d instinct2s \
+  -w
+
+# 2. Запустить симулятор (если еще не запущен)
+"/Users/rvsl/Library/Application Support/Garmin/ConnectIQ/Sdks/connectiq-sdk-mac-8.4.0-2025-12-03-5122605dc/bin/connectiq" &
+
+# 3. Запустить приложение
+"/Users/rvsl/Library/Application Support/Garmin/ConnectIQ/Sdks/connectiq-sdk-mac-8.4.0-2025-12-03-5122605dc/bin/monkeydo" \
+  "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/bin/SaunaTracker.prg" \
+  instinct2s
+```
+
+## 📝 Полезные команды VS Code:
+- `Monkey C: Edit Application` - редактировать свойства приложения
+- `Monkey C: Edit Permissions` - редактировать разрешения
+- `Monkey C: Edit Languages` - добавить языки
+- `Monkey C: Set Products by Product Category` - выбрать категорию устройств
+
+## 🔍 Проверка Java:
+```bash
+# В новом терминале:
+java -version
+# Должно вывести: openjdk version "17.0.17"
+```

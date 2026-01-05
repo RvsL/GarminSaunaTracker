@@ -1,0 +1,10 @@
+{
+  "java.home": "/opt/homebrew/opt/openjdk@17",
+  "java.configuration.runtimes": [
+    {
+      "name": "JavaSE-17",
+      "path": "/opt/homebrew/opt/openjdk@17"
+    }
+  ],
+  "monkeyC.javaPath": "/opt/homebrew/opt/openjdk@17/bin/java"
+}
