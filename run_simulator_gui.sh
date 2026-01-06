@@ -5,19 +5,15 @@ export JAVA_HOME="/opt/homebrew/opt/openjdk@17"
 export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
 
 # Путь к SDK
-SDK_PATH="/Users/rvsl/Library/Application Support/Garmin/ConnectIQ/Sdks/connectiq-sdk-mac-8.4.0-2025-12-03-5122605dc"
-
-# Путь к проекту
-PROJECT_PATH="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker"
+SDK_PATH="$HOME/Library/Application Support/Garmin/ConnectIQ/Sdks/connectiq-sdk-mac-8.4.0-2025-12-03-5122605dc"
 
 # Устройство для симуляции
 DEVICE="instinct2s"
 
 # Ключ разработчика
-DEVELOPER_KEY="/Users/rvsl/Library/Application Support/Garmin/ConnectIQ/Devices/developer_key.der"
+DEVELOPER_KEY="$HOME/Library/Application Support/Garmin/ConnectIQ/Devices/developer_key.der"
 
 echo "🔨 Компиляция проекта..."
-cd "$PROJECT_PATH"
 
 # Очищаем старые сборки ПОЛНОСТЬЮ
 echo "🧹 Полная очистка bin/..."
@@ -48,7 +44,7 @@ sleep 15
 
 # Теперь загружаем приложение
 echo "📱 Загружаю приложение в симулятор..."
-"$SDK_PATH/bin/monkeydo" "$PROJECT_PATH/bin/SaunaTracker.prg" "$DEVICE"
+"$SDK_PATH/bin/monkeydo" "bin/SaunaTracker.prg" "$DEVICE"
 
 if [ $? -eq 0 ]; then
   echo ""

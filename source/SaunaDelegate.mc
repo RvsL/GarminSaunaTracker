@@ -165,8 +165,8 @@ class SaunaDelegate extends WatchUi.BehaviorDelegate {
         try {
             session = ActivityRecording.createSession({
                 :name => "Sauna",
-                :sport => ActivityRecording.SPORT_TRAINING,
-                :subSport => ActivityRecording.SUB_SPORT_STRENGTH_TRAINING
+                :sport => ActivityRecording.SPORT_GENERIC,
+                :subSport => ActivityRecording.SUB_SPORT_GENERIC
             });
             session.start();
         } catch(e) {

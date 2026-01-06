@@ -62,7 +62,6 @@ rm -rf bin/*
 ## 🚀 Как запустить НОВУЮ версию:
 
 ```bash
-cd "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker"
 ./run_simulator_gui.sh
 ```
 
@@ -99,7 +98,6 @@ cd "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - Burger
 
 ### Вариант 3: Вручную очистить и собрать
 ```bash
-cd "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker"
 rm -rf bin/*
 # Затем в VS Code: Run Without Debugging
 ```

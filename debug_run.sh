@@ -3,8 +3,7 @@
 export JAVA_HOME="/opt/homebrew/opt/openjdk@17"
 export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
 
-SDK_PATH="/Users/rvsl/Library/Application Support/Garmin/ConnectIQ/Sdks/connectiq-sdk-mac-8.4.0-2025-12-03-5122605dc"
-PROJECT_PATH="/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker"
+SDK_PATH="$HOME/Library/Application Support/Garmin/ConnectIQ/Sdks/connectiq-sdk-mac-8.4.0-2025-12-03-5122605dc"
 
 echo "=== ОТЛАДОЧНЫЙ ЗАПУСК СИМУЛЯТОРА ==="
 echo ""
@@ -31,21 +30,21 @@ fi
 echo ""
 
 echo "4️⃣ Очистка и компиляция..."
-rm -rf "$PROJECT_PATH/bin/*"
+rm -rf bin/*
 "$SDK_PATH/bin/monkeyc" \
-  -o "$PROJECT_PATH/bin/SaunaTracker.prg" \
-  -f "$PROJECT_PATH/monkey.jungle" \
-  -y "/Users/rvsl/Library/Application Support/Garmin/ConnectIQ/Devices/developer_key.der" \
+  -o "bin/SaunaTracker.prg" \
+  -f "monkey.jungle" \
+  -y "$HOME/Library/Application Support/Garmin/ConnectIQ/Devices/developer_key.der" \
   -d instinct2s \
   -w
 
 echo ""
 echo "5️⃣ Попытка загрузки приложения..."
 echo "Команда:"
-echo "monkeydo $PROJECT_PATH/bin/SaunaTracker.prg instinct2s"
+echo "monkeydo bin/SaunaTracker.prg instinct2s"
 echo ""
 
-"$SDK_PATH/bin/monkeydo" "$PROJECT_PATH/bin/SaunaTracker.prg" instinct2s
+"$SDK_PATH/bin/monkeydo" "bin/SaunaTracker.prg" instinct2s
 EXIT_CODE=$?
 
 echo ""

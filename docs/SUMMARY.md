@@ -35,7 +35,6 @@
 ## 🚀 Запуск:
 
 ```bash
-cd "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker"
 ./run_simulator_gui.sh
 ```
 

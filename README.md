@@ -2,7 +2,7 @@
 
 A minimalist sauna session tracker app for Garmin watches with real-time heart rate monitoring, temperature tracking, and multi-round session support.
 
-![SaunaTracker App](screenshot.png)
+![SaunaTracker App](docs/screenshot.png)
 
 ## ✨ Features
 
@@ -93,6 +93,17 @@ monkeyc -o bin/SaunaTracker.prg \
 connectiq &
 monkeydo bin/SaunaTracker.prg instinct2s
 ```
+
+## 📚 Documentation
+
+For detailed guides and setup instructions, see the [`docs/`](docs/) folder:
+
+- [`docs/QUICK_START.txt`](docs/QUICK_START.txt) - Quick reference guide
+- [`docs/SIMULATOR_GUIDE.md`](docs/SIMULATOR_GUIDE.md) - Detailed simulator usage guide
+- [`docs/SETUP.md`](docs/SETUP.md) - Environment setup instructions
+- [`docs/SUMMARY.md`](docs/SUMMARY.md) - Project overview and status
+- [`docs/FINAL_FIX.md`](docs/FINAL_FIX.md) - Final fixes applied
+- [`docs/FIX_APPLIED.md`](docs/FIX_APPLIED.md) - Fix documentation
 
 ## 📝 License
 

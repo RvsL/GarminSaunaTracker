@@ -12,12 +12,7 @@
 ## 🔧 Необходимо выполнить:
 
 ### 1. Перезапустить VS Code
-Чтобы новые настройки Java вступили в силу:
-```bash
-# Закройте VS Code полностью и откройте заново
-# Или выполните команду:
-code "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker"
-```
+Чтобы новые настройки Java вступили в силу - закройте VS Code полностью и откройте заново.
 
 ### 2. Добавить устройства в проект
 В VS Code выполните команду:
@@ -54,8 +49,7 @@ SaunaTracker/
 
 ### Вариант 1: Через скрипт (рекомендуется)
 ```bash
-cd "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker"
-./run_simulator.sh
+./run_simulator_gui.sh
 ```
 
 ### Вариант 2: Через VS Code
@@ -65,23 +59,20 @@ cd "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - Burger
 ### Вариант 3: Вручную
 ```bash
 # 1. Скомпилировать
-cd "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker"
 export JAVA_HOME="/opt/homebrew/opt/openjdk@17"
 export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
-"/Users/rvsl/Library/Application Support/Garmin/ConnectIQ/Sdks/connectiq-sdk-mac-8.4.0-2025-12-03-5122605dc/bin/monkeyc" \
+monkeyc \
   -o bin/SaunaTracker.prg \
   -f monkey.jungle \
-  -y "/Users/rvsl/Library/Application Support/Garmin/ConnectIQ/Devices/developer_key.der" \
+  -y ~/Library/Application\ Support/Garmin/ConnectIQ/Devices/developer_key.der \
   -d instinct2s \
   -w
 
 # 2. Запустить симулятор (если еще не запущен)
-"/Users/rvsl/Library/Application Support/Garmin/ConnectIQ/Sdks/connectiq-sdk-mac-8.4.0-2025-12-03-5122605dc/bin/connectiq" &
+connectiq &
 
 # 3. Запустить приложение
-"/Users/rvsl/Library/Application Support/Garmin/ConnectIQ/Sdks/connectiq-sdk-mac-8.4.0-2025-12-03-5122605dc/bin/monkeydo" \
-  "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/bin/SaunaTracker.prg" \
-  instinct2s
+monkeydo bin/SaunaTracker.prg instinct2s
 ```
 
 ## 📝 Полезные команды VS Code:

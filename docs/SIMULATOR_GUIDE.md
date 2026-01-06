@@ -4,7 +4,6 @@
 
 ### Способ 1: Автоматический (рекомендуется)
 ```bash
-cd "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker"
 ./run_simulator_gui.sh
 ```
 
@@ -27,9 +26,7 @@ open "/Users/rvsl/Library/Application Support/Garmin/ConnectIQ/Sdks/connectiq-sd
 ```bash
 export JAVA_HOME="/opt/homebrew/opt/openjdk@17"
 export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
-"/Users/rvsl/Library/Application Support/Garmin/ConnectIQ/Sdks/connectiq-sdk-mac-8.4.0-2025-12-03-5122605dc/bin/monkeydo" \
-  "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker/bin/SaunaTracker.prg" \
-  instinct2s
+monkeydo bin/SaunaTracker.prg instinct2s
 ```
 
 ## 🎮 Управление в симуляторе
@@ -82,8 +79,7 @@ export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
 2. Перезапустите симулятор
 3. Пересоберите проект:
 ```bash
-cd "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker"
-./run_simulator.sh
+./run_simulator_gui.sh
 ```
 
 ### Java ошибки
@@ -169,7 +165,6 @@ source ~/.zshrc
 
 ```bash
 # Один скрипт делает всё
-cd "/Users/rvsl/My Drive (sargezaitsev@gmail.com)/2 - рабочее/33 - BurgerKing/garmin/SaunaTracker"
 ./run_simulator_gui.sh
 ```
 
